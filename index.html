@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOORMIX DIGITAL</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOORMIX-DIGITAL</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Catálogo MOORMIX DIGITAL</h1>
+    <h1>MOORMIX-DIGITAL</h1>
+    <p>La mejor tecnología al menor precio</p>
   </header>
 
-  <main>
-    <section id="productos">
-      <div class="producto">
-        <h2>Producto 1</h2>
-        <p>Descripción breve del producto.</p>
-        <button onclick="agregarAlCarrito('Producto 1')">Agregar</button>
-      </div>
-      <div class="producto">
-        <h2>Producto 2</h2>
-        <p>Descripción breve del producto.</p>
-        <button onclick="agregarAlCarrito('Producto 2')">Agregar</button>
-      </div>
-      <!-- Puedes duplicar este bloque para más productos -->
-    </section>
+  <section class="producto">
+    <h2>Samsung Galaxy A54</h2>
+    <img src="imagenes/galaxy-a54.jpg" alt="Samsung Galaxy A54">
+    <p><strong>Precio:</strong> $399</p>
+    <p><strong>Descripción:</strong> Pantalla Super AMOLED de 6.4”, cámara triple de 50MP, batería de 5000mAh.</p>
+    <p><strong>Tipos de pago:</strong> Efectivo, transferencia bancaria, PayPal</p>
+    <button>Comprar ahora</button>
+  </section>
 
-    <button id="ver-resumen" onclick="mostrarResumen()">🛒 Ver resumen de compra</button>
-    <button id="whatsapp-btn" onclick="window.open('https://wa.me/593967427594', '_blank')">💬 WhatsApp</button>
-  </main>
+  <section class="producto">
+    <h2>iPhone 13</h2>
+    <img src="imagenes/iphone13.jpg" alt="iPhone 13">
+    <p><strong>Precio:</strong> $699</p>
+    <p><strong>Descripción:</strong> Chip A15 Bionic, cámara dual de 12MP, pantalla OLED de 6.1”.</p>
+    <p><strong>Tipos de pago:</strong> Efectivo, transferencia bancaria, PayPal</p>
+    <button>Comprar ahora</button>
+  </section>
 
-  <!-- Modal para resumen de compra -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="cerrarModal()">&times;</span>
-      <h3>Resumen de compra</h3>
-      <pre id="resumen-compra"></pre>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <footer>
+    <p>Contacto: moormixdigital@gmail.com</p>
+    <p>Síguenos en Instagram y Facebook</p>
+  </footer>
 </body>
 </html>
