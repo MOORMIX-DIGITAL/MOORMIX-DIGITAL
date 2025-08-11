@@ -28,47 +28,44 @@ document.addEventListener("DOMContentLoaded", () => {
       actualizarCarrito();
     }
 
-    if (e.target.id === "vaciar-carrito") {
-      carrito.length = 0;
-      total = 0;
-      actualizarCarrito();
-    }
+if (e.target.id === "finalizar-compra") {
+  if (carrito.length === 0) {
+    mostrarModal("Tu carrito está vacío.");
+    return;
+  }
 
-    if (e.target.id === "finalizar-compra") {
-      if (carrito.length === 0) {
-        alert("Tu carrito está vacío.");
-        return;
-      }
+  let resumen = "🛍️ Resumen de tu compra:\n";
+  carrito.forEach(item => {
+    resumen += `- ${item.nombre}: $${item.precio}\n`;
+  });
+  resumen += `📦 Envío: $6.00\n`;
+  resumen += `💰 Total a pagar: $${total + 6}\n\n`;
 
-      let resumen = "🛍️ Resumen de tu compra:\n";
-      carrito.forEach(item => {
-        resumen += `- ${item.nombre}: $${item.precio}\n`;
-      });
-      resumen += `📦 Envío: $6.00\n`;
-      resumen += `💰 Total a pagar: $${total + 6}\n\n`;
+  resumen += "💳 Métodos de pago disponibles:\n";
+  resumen += "1. Transferencia bancaria\n";
+  resumen += "2. Contraentrega (pago al recibir)\n\n";
 
-      resumen += "💳 Métodos de pago disponibles:\n";
-      resumen += "1. Transferencia bancaria\n";
-      resumen += "2. Contraentrega (pago al recibir)\n\n";
+  resumen += "🏦 Datos para transferencia:\n";
+  resumen += "Titular: Michael Joel Moran Lopez\n";
+  resumen += "Banco: Banco Pichincha\n";
+  resumen += "Cuenta: 2210769474\n";
+  resumen += "Tipo: Cuenta de ahorros\n\n";
 
-      resumen += "🏦 Datos para transferencia:\n";
-      resumen += "Titular: Michael Joel Moran Lopez\n";
-      resumen += "Banco: Banco Pichincha\n";
-      resumen += "Cuenta: 2210769474\n";
-      resumen += "Tipo: Cuenta de ahorros\n\n";
-      resumen += "Titular: Michael Joel Moran Lopez\n";
-      resumen += "Banco: Banco Guayaquil\n";
-      resumen += "Cuenta: 0036995950\n";
-      resumen += "Tipo: Cuenta de ahorros\n\n";
-      resumen += "📲 Para coordinar el pago y envío, contáctanos por WhatsApp:\n";
-      resumen += "https://wa.me/593967427594\n\n";
+  resumen += "Titular: Michael Joel Moran Lopez\n";
+  resumen += "Banco: Banco Guayaquil\n";
+  resumen += "Cuenta: 0036995950\n";
+  resumen += "Tipo: Cuenta de ahorros\n\n";
 
-      alert(resumen);
+  resumen += "📲 Para coordinar el pago y envío, contáctanos por WhatsApp:\n";
+  resumen += "https://wa.me/593967427594\n\n";
 
-      carrito.length = 0;
-      total = 0;
-      actualizarCarrito();
-    }
+  mostrarModal(resumen);
+
+  carrito.length = 0;
+  total = 0;
+  actualizarCarrito();
+}
+
   });
 
   function actualizarCarrito() {
@@ -96,3 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
   }
 });
+
+function mostrarModal(texto) {
+  let modal = document.getElementById("modal");
+  let contenido = document.getElementById("resumen-compra");
+  contenido.textContent = texto;
+  modal.style.display = "block";
+}
