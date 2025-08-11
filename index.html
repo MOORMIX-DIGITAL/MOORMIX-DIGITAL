@@ -2,88 +2,62 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MOORMIX DIGITAL</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
     <h1>MOORMIX DIGITAL</h1>
+    <p>Productos tecnológicos a tu alcance</p>
   </header>
 
-  <section class="producto">
-    <h2>Samsung Galaxy A54</h2>
-    <img src="https://via.placeholder.com/300x200" alt="Samsung Galaxy A54" />
-    <p>Precio: $450</p>
-    <button class="abrir-formulario">Comprar ahora</button>
-  </section>
+  <!-- Los productos se insertarán automáticamente aquí por script.js -->
 
-  <section class="producto">
-    <h2>iPhone 13</h2>
-    <img src="https://via.placeholder.com/300x200" alt="iPhone 13" />
-    <p>Precio: $780</p>
-    <button class="abrir-formulario">Comprar ahora</button>
-  </section>
-
-  <div class="producto">
-  <img src="imagenes/auriculares-bluetooth.jpg" alt="Auriculares Bluetooth" />
-  <h3>Auriculares Bluetooth MOORMIX</h3>
-  <p class="descripcion">Auriculares inalámbricos con sonido envolvente y batería de larga duración.</p>
-  <p class="precio">$24.99</p>
-  <button class="abrir-formulario">Comprar ahora</button>
-</div>
-
-  <!-- Formulario de opciones de pago -->
-  <div id="formulario-pago" class="modal" style="display:none;">
-    <div class="modal-content">
-      <span class="cerrar">&times;</span>
-      <h3>Opciones de pago</h3>
+  <!-- Formulario de pago -->
+  <div id="formulario-pago" style="display: none;">
+    <div class="formulario-contenido">
+      <span class="cerrar">×</span>
+      <h2>Confirmar compra</h2>
       <form>
         <label for="metodo">Método de pago:</label>
-        <select id="metodo">
-          <option value="transferencia">Transferencia directa</option>
-          <option value="deposito">Depósito bancario</option>
-          <option value="contraentrega">Pago contraentrega</option>
+        <select id="metodo" required>
+          <option value="">Selecciona</option>
+          <option value="transferencia">Transferencia</option>
+          <option value="deposito">Depósito</option>
+          <option value="contraentrega">Contraentrega</option>
         </select>
 
-        <select id="metodo">
-  <option value="transferencia">Transferencia directa</option>
-  <option value="deposito">Depósito bancario</option>
-  <option value="contraentrega">Pago contraentrega</option>
-</select>
-
         <label for="tipo">Tipo de pago:</label>
-        <select id="tipo">
-          <option value="contado">Al contado</option>
-          <option value="credito">A crédito</option>
+        <select id="tipo" required>
+          <option value="">Selecciona</option>
+          <option value="total">Pago total</option>
+          <option value="seña">Seña</option>
         </select>
 
         <label for="banco">Banco:</label>
-        <select id="banco">
-          <option value="pichincha">Banco Pichincha</option>
-          <option value="guayaquil">Banco Guayaquil</option>
+        <select id="banco" required>
+          <option value="">Selecciona</option>
+          <option value="pichincha">Pichincha</option>
+          <option value="guayaquil">Guayaquil</option>
         </select>
 
-       <div id="datos-bancarios" style="display:none; margin-top:10px;">
-  <p><strong>Datos para transferencia:</strong></p>
-  <p>Banco: <span id="nombre-banco"></span></p>
-  <p>Nombre: <span id="nombre-titular"></span></p>
-  <p>Tipo de cuenta: <span id="tipo-cuenta"></span></p>
-  <p>Número de cuenta: <span id="numero-cuenta"></span></p>
-  <p>Cédula/RUC: <span id="cedula-ruc"></span></p>
-</div>
-        
-<div id="datos-cliente" style="display:none; margin-top:10px;">
-  <p><strong>Información del cliente para pago contraentrega:</strong></p>
-  <label for="nombre-cliente">Nombre completo:</label>
-  <input type="text" id="nombre-cliente" name="nombre-cliente" required />
+        <div id="datos-bancarios" style="display: none;">
+          <h3>Datos bancarios</h3>
+          <p><strong>Banco:</strong> <span id="nombre-banco"></span></p>
+          <p><strong>Titular:</strong> <span id="nombre-titular"></span></p>
+          <p><strong>Tipo de cuenta:</strong> <span id="tipo-cuenta"></span></p>
+          <p><strong>Número de cuenta:</strong> <span id="numero-cuenta"></span></p>
+          <p><strong>Cédula/RUC:</strong> <span id="cedula-ruc"></span></p>
+        </div>
 
-  <label for="telefono-cliente">Teléfono:</label>
-  <input type="tel" id="telefono-cliente" name="telefono-cliente" required />
-
-  <label for="direccion-cliente">Dirección:</label>
-  <textarea id="direccion-cliente" name="direccion-cliente" required></textarea>
-</div>
+        <div id="datos-cliente" style="display: none;">
+          <h3>Datos del cliente</h3>
+          <input type="text" id="nombre-cliente" placeholder="Nombre completo" required />
+          <input type="text" id="telefono-cliente" placeholder="Teléfono" required />
+          <input type="text" id="direccion-cliente" placeholder="Dirección" required />
+        </div>
 
         <button type="submit">Confirmar compra</button>
       </form>
