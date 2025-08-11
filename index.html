@@ -64,6 +64,18 @@
   <p>Número de cuenta: <span id="numero-cuenta"></span></p>
   <p>Cédula/RUC: <span id="cedula-ruc"></span></p>
 </div>
+        
+<div id="datos-cliente" style="display:none; margin-top:10px;">
+  <p><strong>Información del cliente para pago contraentrega:</strong></p>
+  <label for="nombre-cliente">Nombre completo:</label>
+  <input type="text" id="nombre-cliente" name="nombre-cliente" required />
+
+  <label for="telefono-cliente">Teléfono:</label>
+  <input type="tel" id="telefono-cliente" name="telefono-cliente" required />
+
+  <label for="direccion-cliente">Dirección:</label>
+  <textarea id="direccion-cliente" name="direccion-cliente" required></textarea>
+</div>
 
         <button type="submit">Confirmar compra</button>
       </form>
