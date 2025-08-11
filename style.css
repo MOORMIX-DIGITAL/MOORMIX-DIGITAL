@@ -59,8 +59,11 @@ body {
 }
 
 .contenido {
-  flex: 3;
-  padding: 20px;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
 }
 
 .menu-marcas {
