@@ -263,3 +263,72 @@ footer {
   height: auto;
   margin-bottom: 10px;
 }
+
+.marcas-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  height: 180px;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.flecha.izquierda {
+  left: 10px;
+}
+
+.flecha.derecha {
+  right: 10px;
+}
+
+.marcas-container {
+  display: flex;
+  overflow-x: hidden;
+  gap: 40px;
+  padding: 20px 60px;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+}
+
+.marca {
+  flex: 0 0 160px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.marca:hover {
+  transform: scale(1.05);
+}
+
+.marca img {
+  max-width: 100px;
+  max-height: 100px;
+}
