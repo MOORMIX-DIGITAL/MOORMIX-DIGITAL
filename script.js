@@ -12,7 +12,7 @@ const productos = [
     descripcion: "Auriculares inalámbricos con sonido envolvente y batería de larga duración.",
     imagen: "imagenes/auriculares-bluetooth.jpg"
   }
-  // Agrega más productos aquí
+  // Puedes seguir agregando más productos aquí
 ];
 
 // Crear contenedor y mostrar productos
