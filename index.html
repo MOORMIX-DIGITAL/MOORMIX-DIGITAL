@@ -47,6 +47,37 @@
     }
   </style>
 </head>
+  <style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  font-family: Arial, sans-serif;
+  white-space: pre-wrap;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
+
 <body>
   <h1>Catálogo de productos</h1>
   <div id="productos"></div>
@@ -55,13 +86,5 @@
     💬 WhatsApp
   </button>
 
-  <div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <pre id="resumen-compra"></pre>
-  </div>
-</div>
-
-  <script src="script.js"></script>
 </body>
 </html>
