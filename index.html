@@ -7,66 +7,34 @@
   <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
-
-<header class="encabezado">
-  <nav class="navbar">
-    <h1 class="logo">MOORMIX DIGITAL</h1>
-    
-    <button class="hamburguesa" onclick="toggleMenu()">☰</button>
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#catalogo">Catálogo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-  <p class="eslogan">Productos tecnológicos a tu alcance</p>
-</header>
+  <header class="encabezado">
+    <nav class="navbar">
+      <h1 class="logo">MOORMIX DIGITAL</h1>
+      <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <p class="eslogan">Productos tecnológicos a tu alcance</p>
+  </header>
 
   <div class="contenedor">
-  <aside class="buscador">
-  <div class="lupa-container">
-    <img src="lupa.png" alt="Buscar" class="lupa" />
-    <input type="text" placeholder="Buscar..." oninput="filtrarProductos()" />
+    <aside class="buscador">
+      <div class="lupa-container">
+        <img src="lupa.png" alt="Buscar" class="lupa" />
+        <input type="text" placeholder="Buscar..." oninput="filtrarProductos()" />
+      </div>
+    </aside>
+
+    <div class="marcas-wrapper">
+      <!-- Carrusel de marcas -->
+      <!-- Aquí puedes agregar tus imágenes de marcas -->
+    </div>
+
+    <!-- Aquí puedes agregar más contenido como productos, secciones, etc. -->
   </div>
-</aside>
-
-<div class="marcas-wrapper">
-  <!-- Carrusel de marcas -->
-</div>
-
-  <button class="flecha izquierda" onclick="deslizarMarcas(-1)">&#10094;</button>
-
-  <div class="marcas-container" id="marcasContainer">
-    <div class="marca" onclick="abrirCatalogo('samsung')">
-      <img src="samsung.png" alt="Samsung" />
-    </div>
-    <div class="marca" onclick="abrirCatalogo('infinix')">
-      <img src="infinix.png" alt="Infinix" />
-    </div>
-    <div class="marca" onclick="abrirCatalogo('redmi')">
-      <img src="redmi.png" alt="Redmi" />
-    </div>
-    <div class="marca" onclick="abrirCatalogo('tecno')">
-      <img src="tecno.png" alt="Tecno" />
-    </div>
-    <div class="marca" onclick="abrirCatalogo('ZTE')">
-      <img src="ZTE.png" alt="ZTE" />
-    </div>
-    <!-- Puedes agregar más marcas aquí -->
-  </div>
-
-  <button class="flecha derecha" onclick="deslizarMarcas(1)">&#10095;</button>
-</div>
-
-    <section class="contenido">
-
-      <div id="catalogo"></div>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 MOORMIX DIGITAL</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
