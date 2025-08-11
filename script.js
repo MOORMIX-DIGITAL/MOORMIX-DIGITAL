@@ -76,7 +76,7 @@ function deslizarMarcas(direccion) {
   });
 }
 
-// Carrusel automático en bucle cada 35 segundos
+// Carrusel automático en bucle cada 5 segundos
 setInterval(() => {
   const contenedor = document.getElementById("marcasContainer");
   const maxScroll = contenedor.scrollWidth - contenedor.clientWidth;
