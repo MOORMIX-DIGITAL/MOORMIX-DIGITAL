@@ -38,3 +38,7 @@ function renderizarCatalogo(lista) {
     catalogo.appendChild(tarjeta);
   });
 }
+
+function abrirCatalogo(marca) {
+  window.location.href = `catalogos/${marca}.html`;
+}
