@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 });
 
-document.querySelectorAll("button").forEach(boton => {
+document.querySelectorAll(".abrir-formulario").forEach(boton => {
   boton.addEventListener("click", () => {
     document.getElementById("formulario-pago").style.display = "flex";
   });
