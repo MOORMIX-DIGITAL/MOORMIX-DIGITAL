@@ -29,9 +29,55 @@ estilo.textContent = `
     width: 220px;
     background-color: #f9f9f9;
     transition: transform 0.2s;
+    cursor: pointer;
   }
   .producto:hover {
     transform: scale(1.05);
+  }
+  #detalle-producto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #detalle-producto .contenido {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+  }
+  #detalle-producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  #detalle-producto .cerrar-detalle {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+  }
+  #detalle-producto button.comprar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
   }
 `;
 document.head.appendChild(estilo);
@@ -60,6 +106,24 @@ const contenedor = document.createElement("div");
 contenedor.id = "lista-productos";
 document.body.insertBefore(contenedor, document.querySelector("footer"));
 
+// ✅ Crear contenedor para detalle ampliado
+const detalle = document.createElement("div");
+detalle.id = "detalle-producto";
+detalle.innerHTML = `
+  <div class="contenido">
+    <button class="cerrar-detalle">✖</button>
+    <img id="detalle-imagen" src="" alt="" />
+    <h2 id="detalle-nombre"></h2>
+    <p id="detalle-descripcion"></p>
+    <p id="detalle-precio" style="font-weight:bold;"></p>
+    <button class="comprar">Comprar ahora</button>
+  </div>
+`;
+document.body.appendChild(detalle);
+document.querySelector(".cerrar-detalle").onclick = () => {
+  detalle.style.display = "none";
+};
+
 // ✅ Mostrar productos agrupados por marca
 function mostrarProductos(marcaSeleccionada = null) {
   contenedor.innerHTML = "";
@@ -80,22 +144,33 @@ function mostrarProductos(marcaSeleccionada = null) {
     productos.filter(p => p.marca === marca).forEach(producto => {
       const div = document.createElement("div");
       div.className = "producto";
-      div.style.textAlign = "center";
       div.innerHTML = `
         <img src="${producto.imagen}" alt="${producto.nombre}" style="margin-bottom: 10px; max-width: 200px;" />
         <h3 style="margin-top: 0;">${producto.nombre}</h3>
-        <p class="descripcion">${producto.descripcion}</p>
         <p class="precio" style="font-weight: bold;">${producto.precio}</p>
-        <button class="abrir-formulario">Comprar ahora</button>
       `;
+      div.onclick = () => mostrarDetalle(producto);
       grupo.appendChild(div);
     });
 
     seccion.appendChild(grupo);
     contenedor.appendChild(seccion);
   });
+}
 
-  activarBotonesCompra();
+// ✅ Mostrar detalle ampliado
+function mostrarDetalle(producto) {
+  document.getElementById("detalle-imagen").src = producto.imagen;
+  document.getElementById("detalle-nombre").textContent = producto.nombre;
+  document.getElementById("detalle-descripcion").textContent = producto.descripcion;
+  document.getElementById("detalle-precio").textContent = producto.precio;
+  document.getElementById("detalle-producto").style.display = "flex";
+
+  document.querySelector("#detalle-producto .comprar").onclick = () => {
+    document.getElementById("formulario-pago").style.display = "flex";
+    actualizarDatosBancarios();
+    detalle.style.display = "none";
+  };
 }
 
 // ✅ Función para filtrar por marca y resaltar botón activo
@@ -111,75 +186,3 @@ window.filtrarMarca = function(marca) {
 
 // ✅ Mostrar todos los productos al cargar
 mostrarProductos();
-
-// ✅ Activar botones de compra
-function activarBotonesCompra() {
-  document.querySelectorAll(".abrir-formulario").forEach(boton => {
-    boton.addEventListener("click", () => {
-      document.getElementById("formulario-pago").style.display = "flex";
-      actualizarDatosBancarios();
-    });
-  });
-}
-
-// ✅ Cerrar el formulario
-document.querySelector(".cerrar").addEventListener("click", () => {
-  document.getElementById("formulario-pago").style.display = "none";
-});
-
-// ✅ Mostrar datos bancarios o formulario de cliente según método de pago
-function actualizarDatosBancarios() {
-  const metodo = document.getElementById("metodo").value;
-  const banco = document.getElementById("banco").value;
-  const datos = document.getElementById("datos-bancarios");
-  const cliente = document.getElementById("datos-cliente");
-
-  if (metodo === "transferencia" || metodo === "deposito") {
-    datos.style.display = "block";
-    cliente.style.display = "none";
-    let cuenta = "";
-    let nombre = "Michael Moran Lopez";
-    let tipoCuenta = "Ahorros";
-    let cedula = "1207085943";
-
-    if (banco === "pichincha") {
-      cuenta = "0036995950";
-    } else if (banco === "guayaquil") {
-      cuenta = "2210769474";
-    }
-
-    document.getElementById("nombre-banco").textContent = banco === "pichincha" ? "Banco Pichincha" : "Banco Guayaquil";
-    document.getElementById("nombre-titular").textContent = nombre;
-    document.getElementById("tipo-cuenta").textContent = tipoCuenta;
-    document.getElementById("numero-cuenta").textContent = cuenta;
-    document.getElementById("cedula-ruc").textContent = cedula;
-  } else if (metodo === "contraentrega") {
-    datos.style.display = "none";
-    cliente.style.display = "block";
-  } else {
-    datos.style.display = "none";
-    cliente.style.display = "none";
-  }
-}
-
-// ✅ Eventos para actualizar contenido dinámico
-document.getElementById("metodo").addEventListener("change", actualizarDatosBancarios);
-document.getElementById("banco").addEventListener("change", actualizarDatosBancarios);
-document.getElementById("tipo").addEventListener("change", actualizarDatosBancarios);
-
-// ✅ Validación al enviar el formulario
-document.querySelector("form").addEventListener("submit", function(event) {
-  const metodo = document.getElementById("metodo").value;
-  const tipo = document.getElementById("tipo").value;
-  const banco = document.getElementById("banco").value;
-
-  if (!metodo || !tipo || !banco) {
-    alert("Por favor, selecciona todas las opciones de pago antes de confirmar.");
-    event.preventDefault();
-    return;
-  }
-
-  if (metodo === "contraentrega") {
-    const nombre = document.getElementById("nombre-cliente").value.trim();
-    const telefono = document.getElementById("telefono-cliente").value.trim();
-    const direccion = document.getElementById("direccion-cliente").value.trim
