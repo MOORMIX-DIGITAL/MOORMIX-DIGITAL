@@ -28,75 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
       actualizarCarrito();
     }
 
-if (e.target.id === "finalizar-compra") {
-  if (carrito.length === 0) {
-    mostrarModal("Tu carrito está vacío.");
-    return;
+document.querySelector(".close").onclick = function() {
+  document.getElementById("modal").style.display = "none";
+};
+window.onclick = function(event) {
+  if (event.target === document.getElementById("modal")) {
+    document.getElementById("modal").style.display = "none";
   }
-
-  let resumen = "🛍️ Resumen de tu compra:\n";
-  carrito.forEach(item => {
-    resumen += `- ${item.nombre}: $${item.precio}\n`;
-  });
-  resumen += `📦 Envío: $6.00\n`;
-  resumen += `💰 Total a pagar: $${total + 6}\n\n`;
-
-  resumen += "💳 Métodos de pago disponibles:\n";
-  resumen += "1. Transferencia bancaria\n";
-  resumen += "2. Contraentrega (pago al recibir)\n\n";
-
-  resumen += "🏦 Datos para transferencia:\n";
-  resumen += "Titular: Michael Joel Moran Lopez\n";
-  resumen += "Banco: Banco Pichincha\n";
-  resumen += "Cuenta: 2210769474\n";
-  resumen += "Tipo: Cuenta de ahorros\n\n";
-
-  resumen += "Titular: Michael Joel Moran Lopez\n";
-  resumen += "Banco: Banco Guayaquil\n";
-  resumen += "Cuenta: 0036995950\n";
-  resumen += "Tipo: Cuenta de ahorros\n\n";
-
-  resumen += "📲 Para coordinar el pago y envío, contáctanos por WhatsApp:\n";
-  resumen += "https://wa.me/593967427594\n\n";
-
-  mostrarModal(resumen);
-
-  carrito.length = 0;
-  total = 0;
-  actualizarCarrito();
-}
-
-  });
-
-  function actualizarCarrito() {
-    let totalDiv = document.getElementById("total");
-    if (!totalDiv) {
-      totalDiv = document.createElement("div");
-      totalDiv.id = "total";
-      totalDiv.style.marginTop = "20px";
-      totalDiv.style.fontWeight = "bold";
-      document.body.appendChild(totalDiv);
-    }
-
-    let lista = "<ul>";
-    carrito.forEach(item => {
-      lista += `<li>${item.nombre} - $${item.precio}</li>`;
-    });
-    lista += "</ul>";
-
-    totalDiv.innerHTML = `
-      <h3>Productos en el carrito:</h3>
-      ${lista}
-      <p>Total: $${total}</p>
-      <button id="vaciar-carrito">Vaciar carrito</button>
-      <button id="finalizar-compra">Finalizar compra</button>
-    `;
-  }
-});
-
-function mostrarModal(texto) {
-  let modal = document.getElementById("modal");
-  let contenido = document.getElementById("resumen-compra");
-  contenido.textContent = texto;
-  modal.style.display = "block";
-}
+};
