@@ -128,16 +128,14 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .marca img {
   max-width: 80px;
   max-height: 80px;
+  object-fit: cover;
+  border-radius: 50%
 }
 
 .flecha {
