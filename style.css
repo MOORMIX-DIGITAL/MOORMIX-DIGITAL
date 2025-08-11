@@ -356,3 +356,37 @@ footer {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
+
+.marcas-container {
+  display: flex;
+  overflow-x: hidden;
+  gap: 50px;
+  padding: 20px 60px;
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+
+.marca {
+  flex: 0 0 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.marca:hover {
+  transform: scale(1.05);
+}
+
+.marca img {
+  max-width: 80px;
+  max-height: 80px;
+}
