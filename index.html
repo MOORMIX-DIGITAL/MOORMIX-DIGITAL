@@ -19,9 +19,9 @@
   <input type="text" placeholder="Buscar..." oninput="filtrarProductos()" />
 </div>
 </aside>
-   <div class="marcas-wrapper">
-  <button class="flecha izquierda" onclick="deslizarMarcas(-1)">&#8592;</button>
-  
+  <div class="marcas-wrapper">
+  <button class="flecha izquierda" onclick="deslizarMarcas(-1)">&#10094;</button>
+
   <div class="marcas-container" id="marcasContainer">
     <div class="marca" onclick="abrirCatalogo('samsung')">
       <img src="samsung.png" alt="Samsung" />
@@ -38,12 +38,12 @@
     <div class="marca" onclick="abrirCatalogo('ZTE')">
       <img src="ZTE.png" alt="ZTE" />
     </div>
-    <!-- Más marcas -->
+    <!-- Puedes agregar más marcas aquí -->
   </div>
 
-  <button class="flecha derecha" onclick="deslizarMarcas(1)">&#8594;</button>
-     
+  <button class="flecha derecha" onclick="deslizarMarcas(1)">&#10095;</button>
 </div>
+
     <section class="contenido">
 
       <div id="catalogo"></div>
