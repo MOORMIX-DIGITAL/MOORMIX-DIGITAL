@@ -14,6 +14,9 @@ estilo.textContent = `
   #menu-marcas button:hover {
     background-color: #0056b3;
   }
+  #menu-marcas button.activo {
+    background-color: #28a745;
+  }
   .categoria h2 {
     font-size: 24px;
     margin-top: 40px;
@@ -35,41 +38,11 @@ document.head.appendChild(estilo);
 
 // ✅ Lista de productos con marca incluida
 const productos = [
-  {
-    nombre: "Samsung Galaxy A06",
-    marca: "Samsung",
-    precio: "$130",
-    descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
-    imagen: "imagen/samsung-galaxy-a06.jpg"
-  },
-  {
-    nombre: "Samsung Galaxy A16",
-    marca: "Samsung",
-    precio: "$170",
-    descripcion: "Auriculares inalámbricos con sonido envolvente y batería de larga duración.",
-    imagen: "imagenes/auriculares-bluetooth.jpg"
-  },
-  {
-    nombre: "Samsung Galaxy A55 5G",
-    marca: "Samsung",
-    precio: "$387",
-    descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
-    imagen: "imagen/samsung-galaxy-a06.jpg"
-  },
-  {
-    nombre: "Motorola G32",
-    marca: "Motorola",
-    precio: "$150",
-    descripcion: "Pantalla FHD+, cámara triple y batería de 5000mAh.",
-    imagen: "imagen/motorola-g32.jpg"
-  },
-  {
-    nombre: "Xiaomi Redmi 13C",
-    marca: "Xiaomi",
-    precio: "$120",
-    descripcion: "Pantalla grande, cámara de 50MP y carga rápida.",
-    imagen: "imagen/xiaomi-redmi-13c.jpg"
-  }
+  { nombre: "Samsung Galaxy A06", marca: "Samsung", precio: "$130", descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.", imagen: "imagen/samsung-galaxy-a06.jpg" },
+  { nombre: "Samsung Galaxy A16", marca: "Samsung", precio: "$170", descripcion: "Auriculares inalámbricos con sonido envolvente y batería de larga duración.", imagen: "imagenes/auriculares-bluetooth.jpg" },
+  { nombre: "Samsung Galaxy A55 5G", marca: "Samsung", precio: "$387", descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.", imagen: "imagen/samsung-galaxy-a06.jpg" },
+  { nombre: "Motorola G32", marca: "Motorola", precio: "$150", descripcion: "Pantalla FHD+, cámara triple y batería de 5000mAh.", imagen: "imagen/motorola-g32.jpg" },
+  { nombre: "Xiaomi Redmi 13C", marca: "Xiaomi", precio: "$120", descripcion: "Pantalla grande, cámara de 50MP y carga rápida.", imagen: "imagen/xiaomi-redmi-13c.jpg" }
 ];
 
 // ✅ Crear menú de navegación por marcas
@@ -78,7 +51,7 @@ const menu = document.createElement("nav");
 menu.id = "menu-marcas";
 menu.style.textAlign = "center";
 menu.style.margin = "20px 0";
-menu.innerHTML = `<button onclick="filtrarMarca(null)">Todos</button>` +
+menu.innerHTML = `<button onclick="filtrarMarca(null)" class="activo">Todos</button>` +
   marcas.map(m => `<button onclick="filtrarMarca('${m}')">${m}</button>`).join(" ");
 document.body.insertBefore(menu, document.querySelector("footer"));
 
@@ -125,8 +98,14 @@ function mostrarProductos(marcaSeleccionada = null) {
   activarBotonesCompra();
 }
 
-// ✅ Función para filtrar por marca
+// ✅ Función para filtrar por marca y resaltar botón activo
 window.filtrarMarca = function(marca) {
+  document.querySelectorAll("#menu-marcas button").forEach(btn => btn.classList.remove("activo"));
+  document.querySelectorAll("#menu-marcas button").forEach(btn => {
+    if ((marca === null && btn.textContent === "Todos") || btn.textContent === marca) {
+      btn.classList.add("activo");
+    }
+  });
   mostrarProductos(marca);
 };
 
@@ -203,15 +182,4 @@ document.querySelector("form").addEventListener("submit", function(event) {
   if (metodo === "contraentrega") {
     const nombre = document.getElementById("nombre-cliente").value.trim();
     const telefono = document.getElementById("telefono-cliente").value.trim();
-    const direccion = document.getElementById("direccion-cliente").value.trim();
-
-    if (!nombre || !telefono || !direccion) {
-      alert("Por favor, completa todos los datos del cliente para pago contraentrega.");
-      event.preventDefault();
-      return;
-    }
-  }
-
-  alert("Compra confirmada. Gracias por tu pedido.");
-  document.getElementById("formulario-pago").style.display = "none";
-});
+    const direccion = document.getElementById("direccion-cliente").value.trim
