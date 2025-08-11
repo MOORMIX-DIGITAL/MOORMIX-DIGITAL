@@ -123,8 +123,8 @@ footer {
 }
 
 .marca {
-  flex: 0 0 120px;
-  height: 120px;
+  flex: 0 0 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
