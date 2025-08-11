@@ -51,3 +51,17 @@ function deslizarMarcas(direccion) {
     behavior: "smooth"
   });
 }
+
+function deslizarMarcas(direccion) {
+  const contenedor = document.getElementById("marcasContainer");
+  const desplazamiento = 200;
+  contenedor.scrollBy({
+    left: direccion * desplazamiento,
+    behavior: "smooth"
+  });
+}
+
+// Carrusel automático
+setInterval(() => {
+  deslizarMarcas(1);
+}, 3000); // cada 3 segundos
