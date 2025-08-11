@@ -64,4 +64,26 @@ function deslizarMarcas(direccion) {
 // Carrusel automático
 setInterval(() => {
   deslizarMarcas(1);
-}, 3000); // cada 3 segundos
+}, 5000); // cada 3 segundos
+
+function deslizarMarcas(direccion) {
+  const contenedor = document.getElementById("marcasContainer");
+  const marca = contenedor.querySelector(".marca");
+  const desplazamiento = marca.offsetWidth + 40; // ancho + gap
+  contenedor.scrollBy({
+    left: direccion * desplazamiento,
+    behavior: "smooth"
+  });
+}
+
+// Carrusel automático en bucle cada 35 segundos
+setInterval(() => {
+  const contenedor = document.getElementById("marcasContainer");
+  const maxScroll = contenedor.scrollWidth - contenedor.clientWidth;
+
+  if (contenedor.scrollLeft >= maxScroll) {
+    contenedor.scrollTo({ left: 0, behavior: "smooth" }); // reinicia al inicio
+  } else {
+    deslizarMarcas(1);
+  }
+}, 5000);
