@@ -14,17 +14,22 @@
 
   <div class="contenedor">
     <aside class="buscador">
-      <input type="text" id="buscar" placeholder="Buscar producto..." oninput="filtrarProductos()" />
+      <div class="lupa-container">
+        <img src="img/lupa.png" alt="Buscar" class="lupa" />
+        <input type="text" id="buscar" placeholder="Buscar..." oninput="filtrarProductos()" />
+      </div>
     </aside>
 
     <section class="contenido">
-      <nav class="menu-marcas">
-        <button onclick="mostrarCatalogo('Samsung')">Samsung</button>
-        <button onclick="mostrarCatalogo('Infinix')">Infinix</button>
-        <button onclick="mostrarCatalogo('Redmi')">Redmi</button>
-        <button onclick="mostrarCatalogo('Tecno')">Tecno</button>
-        <button onclick="mostrarCatalogo('ZTE')">ZTE</button>
-      </nav>
+      <div class="menu-marcas">
+        <div class="carrusel">
+          <div class="marca" onclick="mostrarCatalogo('Samsung')">Samsung</div>
+          <div class="marca" onclick="mostrarCatalogo('Infinix')">Infinix</div>
+          <div class="marca" onclick="mostrarCatalogo('Redmi')">Redmi</div>
+          <div class="marca" onclick="mostrarCatalogo('Tecno')">Tecno</div>
+          <div class="marca" onclick="mostrarCatalogo('ZTE')">ZTE</div>
+        </div>
+      </div>
 
       <div id="catalogo"></div>
     </section>
