@@ -18,15 +18,14 @@ body {
 }
 
 .contenedor {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .buscador {
-  flex: 1;
-  min-width: 200px;
-  padding: 20px;
-  background: #eaeaea;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .lupa-container {
