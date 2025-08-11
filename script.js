@@ -33,6 +33,39 @@ document.addEventListener("DOMContentLoaded", () => {
       total = 0;
       actualizarCarrito();
     }
+
+    if (e.target.id === "finalizar-compra") {
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+      }
+
+      let resumen = "🛍️ Resumen de tu compra:\n";
+      carrito.forEach(item => {
+        resumen += `- ${item.nombre}: $${item.precio}\n`;
+      });
+      resumen += `📦 Envío: $6.00\n`;
+      resumen += `💰 Total a pagar: $${total + 6}\n\n`;
+
+      resumen += "💳 Métodos de pago disponibles:\n";
+      resumen += "1. Transferencia bancaria\n";
+      resumen += "2. Contraentrega (pago al recibir)\n\n";
+
+      resumen += "🏦 Datos para transferencia:\n";
+      resumen += "Titular: Juan Pérez\n";
+      resumen += "Banco: Banco Pichincha\n";
+      resumen += "Cuenta: 1234567890\n";
+      resumen += "Tipo: Cuenta de ahorros\n\n";
+
+      resumen += "📲 Para coordinar el pago y envío, contáctanos por WhatsApp:\n";
+      resumen += "https://wa.me/593999999999\n\n";
+
+      alert(resumen);
+
+      carrito.length = 0;
+      total = 0;
+      actualizarCarrito();
+    }
   });
 
   function actualizarCarrito() {
@@ -56,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ${lista}
       <p>Total: $${total}</p>
       <button id="vaciar-carrito">Vaciar carrito</button>
+      <button id="finalizar-compra">Finalizar compra</button>
     `;
   }
 });
