@@ -64,3 +64,30 @@ setInterval(() => {
     deslizarMarcas(1);
   }
 }, 5000);
+
+let autoScrollInterval;
+
+function iniciarAutoScroll() {
+  autoScrollInterval = setInterval(() => {
+    const contenedor = document.getElementById("marcasContainer");
+    const maxScroll = contenedor.scrollWidth - contenedor.clientWidth;
+
+    if (contenedor.scrollLeft >= maxScroll) {
+      contenedor.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      contenedor.scrollBy({ left: 100, behavior: "smooth" });
+    }
+  }, 35000); // cada 35 segundos
+}
+
+function detenerAutoScroll() {
+  clearInterval(autoScrollInterval);
+}
+
+// Iniciar al cargar
+window.addEventListener("load", iniciarAutoScroll);
+
+// Detener al pasar el mouse
+const marcasContainer = document.getElementById("marcasContainer");
+marcasContainer.addEventListener("mouseenter", detenerAutoScroll);
+marcasContainer.addEventListener("mouseleave", iniciarAutoScroll);
