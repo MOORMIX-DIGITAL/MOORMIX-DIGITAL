@@ -284,16 +284,17 @@ header {
 
 .hamburguesa {
   display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .hamburguesa {
     display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
   }
 
   .nav-links {
