@@ -199,3 +199,67 @@ footer {
   height: auto;
   margin-bottom: 10px;
 }
+
+.marcas-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.flecha.izquierda {
+  left: 10px;
+}
+
+.flecha.derecha {
+  right: 10px;
+}
+
+.marcas-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 40px;
+  scroll-behavior: smooth;
+}
+
+.marca {
+  flex: 0 0 auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.marca:hover {
+  transform: scale(1.05);
+}
+
+.marca img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
