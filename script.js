@@ -28,11 +28,38 @@ document.addEventListener("DOMContentLoaded", () => {
       actualizarCarrito();
     }
 
-document.querySelector(".close").onclick = function() {
-  document.getElementById("modal").style.display = "none";
-};
-window.onclick = function(event) {
-  if (event.target === document.getElementById("modal")) {
-    document.getElementById("modal").style.display = "none";
+    if (e.target.id === "finalizar-compra") {
+      mostrarResumen();
+    }
+  });
+
+  function actualizarCarrito() {
+    const lista = document.getElementById("carrito");
+    lista.innerHTML = "";
+    carrito.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.nombre} - $${item.precio}`;
+      lista.appendChild(li);
+    });
   }
-};
+
+  function mostrarResumen() {
+    let resumen = "Resumen de compra:\n";
+    carrito.forEach(item => {
+      resumen += `- ${item.nombre}: $${item.precio}\n`;
+    });
+    resumen += `\nTotal: $${total}`;
+
+    document.getElementById("resumen-compra").textContent = resumen;
+    document.getElementById("modal").style.display = "block";
+  }
+
+  document.querySelector(".close").onclick = function() {
+    document.getElementById("modal").style.display = "none";
+  };
+  window.onclick = function(event) {
+    if (event.target === document.getElementById("modal")) {
+      document.getElementById("modal").style.display = "none";
+    }
+  };
+});
