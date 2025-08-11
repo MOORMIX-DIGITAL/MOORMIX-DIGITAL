@@ -45,31 +45,8 @@ function abrirCatalogo(marca) {
 
 function deslizarMarcas(direccion) {
   const contenedor = document.getElementById("marcasContainer");
-  const desplazamiento = 200; // píxeles por clic
-  contenedor.scrollBy({
-    left: direccion * desplazamiento,
-    behavior: "smooth"
-  });
-}
-
-function deslizarMarcas(direccion) {
-  const contenedor = document.getElementById("marcasContainer");
-  const desplazamiento = 200;
-  contenedor.scrollBy({
-    left: direccion * desplazamiento,
-    behavior: "smooth"
-  });
-}
-
-// Carrusel automático
-setInterval(() => {
-  deslizarMarcas(1);
-}, 5000); // cada 3 segundos
-
-function deslizarMarcas(direccion) {
-  const contenedor = document.getElementById("marcasContainer");
   const marca = contenedor.querySelector(".marca");
-  const desplazamiento = marca.offsetWidth + 40; // ancho + gap
+  const desplazamiento = marca.offsetWidth + 40; // ancho + espacio
   contenedor.scrollBy({
     left: direccion * desplazamiento,
     behavior: "smooth"
