@@ -72,16 +72,6 @@ body {
   gap: 15px;
 }
 
-.marca {
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-  white-space: nowrap;
-}
-
 .marca:hover {
   transform: scale(1.1);
   background: #0056b3;
