@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOORMIX DIGITAL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Catálogo MOORMIX DIGITAL</h1>
+  </header>
+
+  <main>
+    <section id="productos">
+      <div class="producto">
+        <h2>Producto 1</h2>
+        <p>Descripción breve del producto.</p>
+        <button onclick="agregarAlCarrito('Producto 1')">Agregar</button>
+      </div>
+      <div class="producto">
+        <h2>Producto 2</h2>
+        <p>Descripción breve del producto.</p>
+        <button onclick="agregarAlCarrito('Producto 2')">Agregar</button>
+      </div>
+      <!-- Puedes duplicar este bloque para más productos -->
+    </section>
+
+    <button id="ver-resumen" onclick="mostrarResumen()">🛒 Ver resumen de compra</button>
+    <button id="whatsapp-btn" onclick="window.open('https://wa.me/593967427594', '_blank')">💬 WhatsApp</button>
+  </main>
+
+  <!-- Modal para resumen de compra -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h3>Resumen de compra</h3>
+      <pre id="resumen-compra"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
