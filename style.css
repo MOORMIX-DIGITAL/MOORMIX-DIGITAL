@@ -136,8 +136,8 @@ footer {
 .marca img {
   width: 80px;
   height: 80px;
-  object-fit: cover;
-  border-radius: 50%
+  object-fit: contain;
+  border-radius: 10%
 }
 
 .flecha {
