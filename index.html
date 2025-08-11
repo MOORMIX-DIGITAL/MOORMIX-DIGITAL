@@ -19,24 +19,30 @@
   <input type="text" placeholder="Buscar..." oninput="filtrarProductos()" />
 </div>
 </aside>
-    <div class="marcas-container">
-  <div class="marca" onclick="abrirCatalogo('samsung')">
-    <img src="samsung.png" alt="Samsung" />
-  </div>
-  <div class="marca" onclick="abrirCatalogo('infinix')">
-    <img src="infinix.png" alt="Infinix" />
-  </div>
+   <div class="marcas-wrapper">
+  <button class="flecha izquierda" onclick="deslizarMarcas(-1)">&#8592;</button>
+  
+  <div class="marcas-container" id="marcasContainer">
+    <div class="marca" onclick="abrirCatalogo('samsung')">
+      <img src="samsung.png" alt="Samsung" />
+    </div>
+    <div class="marca" onclick="abrirCatalogo('infinix')">
+      <img src="infinix.png" alt="Infinix" />
+    </div>
     <div class="marca" onclick="abrirCatalogo('redmi')">
-    <img src="redmi.png" alt="redmi" />
+      <img src="redmi.png" alt="Redmi" />
+    </div>
+    <div class="marca" onclick="abrirCatalogo('tecno')">
+      <img src="tecno.png" alt="Tecno" />
+    </div>
+    <div class="marca" onclick="abrirCatalogo('ZTE')">
+      <img src="ZTE.png" alt="ZTE" />
+    </div>
+    <!-- Más marcas -->
   </div>
-  <div class="marca" onclick="abrirCatalogo('tecno')">
-    <img src="tecno.png" alt="tecno" />
-  </div>
-  <div class="marca" onclick="abrirCatalogo('ZTE')">
-    <img src="ZTE.png" alt="ZTE" />
-  </div>
-      
-  <!-- Agrega más marcas aquí -->
+
+  <button class="flecha derecha" onclick="deslizarMarcas(1)">&#8594;</button>
+     
 </div>
     <section class="contenido">
 
