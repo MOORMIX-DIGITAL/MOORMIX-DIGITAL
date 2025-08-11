@@ -14,11 +14,13 @@ function actualizarDatosBancarios() {
   const banco = document.getElementById("banco").value;
   const datos = document.getElementById("datos-bancarios");
 
-  if (metodo === "transferencia") {
+  // Mostrar datos bancarios solo si el método es transferencia o depósito
+  if (metodo === "transferencia" || metodo === "deposito") {
     datos.style.display = "block";
+
     let cuenta = "";
     let nombre = "Michael Moran Lopez";
-    let tipo = "Ahorros";
+    let tipoCuenta = "Ahorros";
     let cedula = "1207085943";
 
     if (banco === "pichincha") {
@@ -29,7 +31,7 @@ function actualizarDatosBancarios() {
 
     document.getElementById("nombre-banco").textContent = banco === "pichincha" ? "Banco Pichincha" : "Banco Guayaquil";
     document.getElementById("nombre-titular").textContent = nombre;
-    document.getElementById("tipo-cuenta").textContent = tipo;
+    document.getElementById("tipo-cuenta").textContent = tipoCuenta;
     document.getElementById("numero-cuenta").textContent = cuenta;
     document.getElementById("cedula-ruc").textContent = cedula;
   } else {
