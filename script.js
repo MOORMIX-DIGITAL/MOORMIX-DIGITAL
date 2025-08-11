@@ -76,3 +76,8 @@ window.addEventListener("load", iniciarCarrusel);
 const marcasContainer = document.getElementById("marcasContainer");
 marcasContainer.addEventListener("mouseenter", detenerCarrusel);
 marcasContainer.addEventListener("mouseleave", iniciarCarrusel);
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
