@@ -7,10 +7,22 @@ const productos = [
     imagen: "imagen/samsung-galaxy-a06.jpg"
   },
   {
-    nombre: "Auriculares Bluetooth MOORMIX",
-    precio: "$24.99",
+    nombre: "Samsung Galaxy A16",
+    precio: "$170",
     descripcion: "Auriculares inalámbricos con sonido envolvente y batería de larga duración.",
     imagen: "imagenes/auriculares-bluetooth.jpg"
+  },
+  {
+    nombre: "Samsung Galaxy A16",
+    precio: "$205",
+    descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
+    imagen: "imagen/samsung-galaxy-a06.jpg"
+  },
+    {
+    nombre: "Samsung Galaxy A55 5G",
+    precio: "$387",
+    descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
+    imagen: "imagen/samsung-galaxy-a06.jpg"
   }
   // Puedes seguir agregando más productos aquí
 ];
