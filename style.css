@@ -29,10 +29,31 @@ body {
   background: #eaeaea;
 }
 
-.buscador input {
+.lupa-container {
+  position: relative;
+  width: 40px;
+  transition: width 0.3s ease;
+}
+
+.lupa-container:hover {
   width: 100%;
-  padding: 10px;
+}
+
+.lupa {
+  width: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.lupa-container input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
   font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  display: block;
 }
 
 .contenido {
@@ -41,20 +62,28 @@ body {
 }
 
 .menu-marcas {
+  overflow-x: auto;
+  white-space: nowrap;
   margin-bottom: 20px;
 }
 
-.menu-marcas button {
-  margin: 5px;
-  padding: 10px 15px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.carrusel {
+  display: flex;
+  gap: 15px;
 }
 
-.menu-marcas button:hover {
+.marca {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  white-space: nowrap;
+}
+
+.marca:hover {
+  transform: scale(1.1);
   background: #0056b3;
 }
 
@@ -71,6 +100,11 @@ body {
   padding: 15px;
   width: 220px;
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
 }
 
 .producto img {
