@@ -1,3 +1,62 @@
+.encabezado {
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.encabezado h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.eslogan {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.menu-marcas {
+  margin-top: 20px;
+}
+
+.menu-marcas button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-marcas button:hover {
+  background-color: #0056b3;
+}
+
+#catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.producto {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 15px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 /* Reset básico */
 * {
   margin: 0;
