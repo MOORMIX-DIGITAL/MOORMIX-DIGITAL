@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MOORMIX-DIGITAL</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOORMIX DIGITAL</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>MOORMIX-DIGITAL</h1>
-    <p>La mejor tecnología al menor precio</p>
+    <h1>MOORMIX DIGITAL</h1>
   </header>
 
   <section class="producto">
     <h2>Samsung Galaxy A54</h2>
-    <img src="imagenes/galaxy-a54.jpg" alt="Samsung Galaxy A54">
-    <p><strong>Precio:</strong> $399</p>
-    <p><strong>Descripción:</strong> Pantalla Super AMOLED de 6.4”, cámara triple de 50MP, batería de 5000mAh.</p>
-    <p><strong>Tipos de pago:</strong> Efectivo, transferencia bancaria, PayPal</p>
-    <button>Comprar ahora</button>
+    <img src="https://via.placeholder.com/300x200" alt="Samsung Galaxy A54" />
+    <p>Precio: $450</p>
+    <button class="abrir-formulario">Comprar ahora</button>
   </section>
 
   <section class="producto">
     <h2>iPhone 13</h2>
-    <img src="imagenes/iphone13.jpg" alt="iPhone 13">
-    <p><strong>Precio:</strong> $699</p>
-    <p><strong>Descripción:</strong> Chip A15 Bionic, cámara dual de 12MP, pantalla OLED de 6.1”.</p>
-    <p><strong>Tipos de pago:</strong> Efectivo, transferencia bancaria, PayPal</p>
-    <button>Comprar ahora</button>
+    <img src="https://via.placeholder.com/300x200" alt="iPhone 13" />
+    <p>Precio: $780</p>
+    <button class="abrir-formulario">Comprar ahora</button>
   </section>
 
-  <footer>
-    <p>Contacto: moormixdigital@gmail.com</p>
-    <p>Síguenos en Instagram y Facebook</p>
-  </footer> 
   <!-- Formulario de opciones de pago -->
-<div id="formulario-pago" class="modal" style="display:none;">
-  <div class="modal-content">
-    <span class="cerrar">&times;</span>
-    <h3>Opciones de pago</h3>
-    <form>
-      <label for="metodo">Método de pago:</label>
-      <select id="metodo">
-        <option value="transferencia">Transferencia directa</option>
-        <option value="contraentrega">Pago contraentrega</option>
-      </select>
+  <div id="formulario-pago" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <h3>Opciones de pago</h3>
+      <form>
+        <label for="metodo">Método de pago:</label>
+        <select id="metodo">
+          <option value="transferencia">Transferencia directa</option>
+          <option value="contraentrega">Pago contraentrega</option>
+        </select>
 
-      <label for="tipo">Tipo de pago:</label>
-      <select id="tipo">
-        <option value="contado">Al contado</option>
-        <option value="credito">A crédito</option>
-      </select>
+        <label for="tipo">Tipo de pago:</label>
+        <select id="tipo">
+          <option value="contado">Al contado</option>
+          <option value="credito">A crédito</option>
+        </select>
 
-      <label for="banco">Banco:</label>
-      <select id="banco">
-        <option value="pichincha">Banco Pichincha</option>
-        <option value="guayaquil">Banco Guayaquil</option>
-      </select>
+        <label for="banco">Banco:</label>
+        <select id="banco">
+          <option value="pichincha">Banco Pichincha</option>
+          <option value="guayaquil">Banco Guayaquil</option>
+        </select>
 
-      <button type="submit">Confirmar compra</button>
-    </form>
+        <button type="submit">Confirmar compra</button>
+      </form>
+    </div>
   </div>
-</div>
 
+  <footer>
+    <p>&copy; 2025 MOORMIX DIGITAL</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
