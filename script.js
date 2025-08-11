@@ -24,6 +24,7 @@ const productos = [
     descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
     imagen: "imagen/samsung-galaxy-a06.jpg"
   }
+  
   // Puedes seguir agregando más productos aquí
 ];
 
