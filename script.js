@@ -4,7 +4,7 @@ const productos = [
     nombre: "Samsung Galaxy A06",
     precio: "$129.99",
     descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
-    imagen: "imagenes/Samsung Galaxy A06.jpg"
+    imagen: "imagenes/samsung-galaxy-a06.jpg"
   },
   {
     nombre: "Auriculares Bluetooth MOORMIX",
