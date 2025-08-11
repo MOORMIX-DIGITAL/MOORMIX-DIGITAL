@@ -1,3 +1,38 @@
+// ✅ Estilos CSS integrados
+const estilo = document.createElement("style");
+estilo.textContent = `
+  #menu-marcas button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #menu-marcas button:hover {
+    background-color: #0056b3;
+  }
+  .categoria h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    color: #333;
+  }
+  .producto {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 220px;
+    background-color: #f9f9f9;
+    transition: transform 0.2s;
+  }
+  .producto:hover {
+    transform: scale(1.05);
+  }
+`;
+document.head.appendChild(estilo);
+
 // ✅ Lista de productos con marca incluida
 const productos = [
   {
@@ -43,7 +78,8 @@ const menu = document.createElement("nav");
 menu.id = "menu-marcas";
 menu.style.textAlign = "center";
 menu.style.margin = "20px 0";
-menu.innerHTML = marcas.map(m => `<button onclick="filtrarMarca('${m}')">${m}</button>`).join(" ");
+menu.innerHTML = `<button onclick="filtrarMarca(null)">Todos</button>` +
+  marcas.map(m => `<button onclick="filtrarMarca('${m}')">${m}</button>`).join(" ");
 document.body.insertBefore(menu, document.querySelector("footer"));
 
 // ✅ Crear contenedor principal
@@ -66,12 +102,12 @@ function mostrarProductos(marcaSeleccionada = null) {
     grupo.style.display = "flex";
     grupo.style.flexWrap = "wrap";
     grupo.style.justifyContent = "center";
+    grupo.style.gap = "20px";
 
     productos.filter(p => p.marca === marca).forEach(producto => {
       const div = document.createElement("div");
       div.className = "producto";
       div.style.textAlign = "center";
-      div.style.margin = "20px";
       div.innerHTML = `
         <img src="${producto.imagen}" alt="${producto.nombre}" style="margin-bottom: 10px; max-width: 200px;" />
         <h3 style="margin-top: 0;">${producto.nombre}</h3>
