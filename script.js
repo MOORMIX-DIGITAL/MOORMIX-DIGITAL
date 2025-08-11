@@ -52,13 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
       resumen += "2. Contraentrega (pago al recibir)\n\n";
 
       resumen += "🏦 Datos para transferencia:\n";
-      resumen += "Titular: Juan Pérez\n";
+      resumen += "Titular: Michael Joel Moran Lopez\n";
       resumen += "Banco: Banco Pichincha\n";
-      resumen += "Cuenta: 1234567890\n";
+      resumen += "Cuenta: 2210769474\n";
       resumen += "Tipo: Cuenta de ahorros\n\n";
-
+      resumen += "Titular: Michael Joel Moran Lopez\n";
+      resumen += "Banco: Banco Guayaquil\n";
+      resumen += "Cuenta: 0036995950\n";
+      resumen += "Tipo: Cuenta de ahorros\n\n";
       resumen += "📲 Para coordinar el pago y envío, contáctanos por WhatsApp:\n";
-      resumen += "https://wa.me/593999999999\n\n";
+      resumen += "https://wa.me/593967427594\n\n";
 
       alert(resumen);
 
