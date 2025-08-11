@@ -1,62 +1,166 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #222;
-  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Encabezado */
+header {
   text-align: center;
-  padding: 20px;
+  margin-bottom: 40px;
 }
 
-section.producto {
-  background-color: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  color: black;
+header h1 {
+  font-size: 2.5em;
+  color: #0077cc;
 }
 
-section.producto img {
+header p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Productos */
+#lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.producto {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.02);
+}
+
+.producto img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px;
+.producto h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2em;
+  color: #222;
+}
+
+.producto .descripcion {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.producto .precio {
+  font-size: 1.1em;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.producto button {
+  background-color: #0077cc;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  padding: 10px 16px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 1em;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #ddd;
-  color: black;
+.producto button:hover {
+  background-color: #005fa3;
 }
 
-.modal {
+/* Formulario de pago */
+#formulario-pago {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  color: black;
+.formulario-contenido {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.formulario-contenido h2 {
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.formulario-contenido label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.formulario-contenido select,
+.formulario-contenido input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.formulario-contenido button[type="submit"] {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.formulario-contenido button:hover {
+  background-color: #218838;
 }
 
 .cerrar {
-  float: right;
-  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5em;
   cursor: pointer;
+  color: #999;
+}
+
+.cerrar:hover {
+  color: #333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
 }
