@@ -2,7 +2,7 @@
 const productos = [
   {
     nombre: "Samsung Galaxy A06",
-    precio: "$129.99",
+    precio: "$130",
     descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
     imagen: "imagen/samsung-galaxy-a06.jpg"
   },
@@ -19,14 +19,12 @@ const productos = [
     imagen: "imagen/samsung-galaxy-a06.jpg"
   },
     {
-    nombre: "Samsung Galaxy A55 5G",
-    precio: "$387",
-    descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
-    imagen: "imagen/samsung-galaxy-a06.jpg"
-  }
-  
-  // Puedes seguir agregando más productos aquí
-];
+  nombre: "Samsung Galaxy A55 5G",
+  precio: "$387",
+  descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
+  imagen: "imagen/samsung-galaxy-a06.jpg"
+}
+]; // ← esta línea cierra el arreglo correctamente
 
 // Crear contenedor y mostrar productos
 const contenedor = document.createElement("div");
