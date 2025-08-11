@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const contenedor = document.getElementById("productos");
   let total = 0;
+  const carrito = [];
 
   productos.forEach(producto => {
     const div = document.createElement("div");
@@ -13,21 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
       <h2>${producto.nombre}</h2>
       <img src="${producto.imagen}" alt="${producto.nombre}" width="200">
       <p>Precio: $${producto.precio}</p>
-      <button class="agregar-carrito">Agregar al carrito</button>
+      <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${producto.precio}">Agregar al carrito</button>
     `;
     contenedor.appendChild(div);
   });
 
   document.addEventListener("click", function(e) {
     if (e.target.classList.contains("agregar-carrito")) {
-      const precioTexto = e.target.previousElementSibling.textContent;
-      const precio = parseFloat(precioTexto.replace("Precio: $", ""));
+      const nombre = e.target.getAttribute("data-nombre");
+      const precio = parseFloat(e.target.getAttribute("data-precio"));
       total += precio;
-      actualizarTotal();
+      carrito.push({ nombre, precio });
+      actualizarCarrito();
     }
   });
 
-  function actualizarTotal() {
+  function actualizarCarrito() {
     let totalDiv = document.getElementById("total");
     if (!totalDiv) {
       totalDiv = document.createElement("div");
@@ -36,6 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
       totalDiv.style.fontWeight = "bold";
       document.body.appendChild(totalDiv);
     }
-    totalDiv.textContent = `Total: $${total}`;
+
+    let lista = "<ul>";
+    carrito.forEach(item => {
+      lista += `<li>${item.nombre} - $${item.precio}</li>`;
+    });
+    lista += "</ul>";
+
+    totalDiv.innerHTML = `
+      <h3>Productos en el carrito:</h3>
+      ${lista}
+      <p>Total: $${total}</p>
+    `;
   }
 });
