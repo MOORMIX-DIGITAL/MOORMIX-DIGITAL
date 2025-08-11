@@ -42,3 +42,12 @@ function renderizarCatalogo(lista) {
 function abrirCatalogo(marca) {
   window.location.href = `catalogos/${marca}.html`;
 }
+
+function deslizarMarcas(direccion) {
+  const contenedor = document.getElementById("marcasContainer");
+  const desplazamiento = 200; // píxeles por clic
+  contenedor.scrollBy({
+    left: direccion * desplazamiento,
+    behavior: "smooth"
+  });
+}
