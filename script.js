@@ -39,3 +39,18 @@ function actualizarDatosBancarios() {
 
 document.getElementById("metodo").addEventListener("change", actualizarDatosBancarios);
 document.getElementById("banco").addEventListener("change", actualizarDatosBancarios);
+
+document.querySelector("form").addEventListener("submit", function(event) {
+  const metodo = document.getElementById("metodo").value;
+  const tipo = document.getElementById("tipo").value;
+  const banco = document.getElementById("banco").value;
+
+  if (!metodo || !tipo || !banco) {
+    alert("Por favor, selecciona todas las opciones de pago antes de confirmar.");
+    event.preventDefault(); // Evita que se envíe el formulario
+  }
+  else {
+  alert("Compra confirmada. Gracias por tu pedido.");
+  document.getElementById("formulario-pago").style.display = "none";
+}
+});
