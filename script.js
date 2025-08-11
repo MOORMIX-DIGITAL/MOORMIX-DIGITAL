@@ -1,8 +1,47 @@
+// Lista de productos
+const productos = [
+  {
+    nombre: "Samsung Galaxy A06",
+    precio: "$129.99",
+    descripcion: "Smartphone con pantalla HD+, cámara dual y batería de larga duración.",
+    imagen: "imagenes/Samsung Galaxy A06.jpg"
+  },
+  {
+    nombre: "Auriculares Bluetooth MOORMIX",
+    precio: "$24.99",
+    descripcion: "Auriculares inalámbricos con sonido envolvente y batería de larga duración.",
+    imagen: "imagenes/auriculares-bluetooth.jpg"
+  }
+  // Agrega más productos aquí
+];
+
+// Crear contenedor y mostrar productos
+const contenedor = document.createElement("div");
+contenedor.id = "lista-productos";
+document.body.insertBefore(contenedor, document.querySelector("footer"));
+
+productos.forEach(producto => {
+  const div = document.createElement("div");
+  div.className = "producto";
+  div.style.textAlign = "center";
+  div.style.marginBottom = "30px";
+
+  div.innerHTML = `
+    <img src="${producto.imagen}" alt="${producto.nombre}" style="margin-bottom: 10px; max-width: 200px;" />
+    <h3 style="margin-top: 0;">${producto.nombre}</h3>
+    <p class="descripcion">${producto.descripcion}</p>
+    <p class="precio" style="font-weight: bold;">${producto.precio}</p>
+    <button class="abrir-formulario">Comprar ahora</button>
+  `;
+
+  contenedor.appendChild(div);
+});
+
 // Abrir el formulario al hacer clic en "Comprar ahora"
 document.querySelectorAll(".abrir-formulario").forEach(boton => {
   boton.addEventListener("click", () => {
     document.getElementById("formulario-pago").style.display = "flex";
-    actualizarDatosBancarios(); // Cargar datos si hay selección previa
+    actualizarDatosBancarios();
   });
 });
 
@@ -38,6 +77,7 @@ function actualizarDatosBancarios() {
     document.getElementById("tipo-cuenta").textContent = tipoCuenta;
     document.getElementById("numero-cuenta").textContent = cuenta;
     document.getElementById("cedula-ruc").textContent = cedula;
+
   } else if (metodo === "contraentrega") {
     datos.style.display = "none";
     cliente.style.display = "block";
