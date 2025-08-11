@@ -53,41 +53,37 @@ function deslizarMarcas(direccion) {
   });
 }
 
-// Carrusel automático en bucle cada 5 segundos
+// Carrusel automático en bucle cada 3 segundos
 setInterval(() => {
   const contenedor = document.getElementById("marcasContainer");
   const maxScroll = contenedor.scrollWidth - contenedor.clientWidth;
-
   if (contenedor.scrollLeft >= maxScroll) {
     contenedor.scrollTo({ left: 0, behavior: "smooth" }); // reinicia al inicio
   } else {
     deslizarMarcas(1);
   }
-}, 5000);
+}, 3000);
 
-let autoScrollInterval;
+let intervaloCarrusel;
 
-function iniciarAutoScroll() {
-  autoScrollInterval = setInterval(() => {
+function iniciarCarrusel() {
+  intervaloCarrusel = setInterval(() => {
     const contenedor = document.getElementById("marcasContainer");
     const maxScroll = contenedor.scrollWidth - contenedor.clientWidth;
-
     if (contenedor.scrollLeft >= maxScroll) {
       contenedor.scrollTo({ left: 0, behavior: "smooth" });
     } else {
-      contenedor.scrollBy({ left: 100, behavior: "smooth" });
+      deslizarMarcas(1);
     }
-  }, 35000); // cada 35 segundos
+  }, 3000); // cada 3 segundos
 }
 
-function detenerAutoScroll() {
-  clearInterval(autoScrollInterval);
+function detenerCarrusel() {
+  clearInterval(intervaloCarrusel);
 }
 
-// Iniciar al cargar
-window.addEventListener("load", iniciarAutoScroll);
+window.addEventListener("load", iniciarCarrusel);
 
-// Detener al pasar el mouse
 const marcasContainer = document.getElementById("marcasContainer");
-marcasContainer.addEventListener("mouseenter", detenerAutoScroll);
-marcasContainer.addEventListener("mouseleave", iniciarAutoScroll);
+marcasContainer.addEventListener("mouseenter", detenerCarrusel);
+marcasContainer.addEventListener("mouseleave", iniciarCarrusel);
