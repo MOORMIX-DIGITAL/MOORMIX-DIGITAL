@@ -27,6 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
       carrito.push({ nombre, precio });
       actualizarCarrito();
     }
+
+    if (e.target.id === "vaciar-carrito") {
+      carrito.length = 0;
+      total = 0;
+      actualizarCarrito();
+    }
   });
 
   function actualizarCarrito() {
@@ -49,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <h3>Productos en el carrito:</h3>
       ${lista}
       <p>Total: $${total}</p>
+      <button id="vaciar-carrito">Vaciar carrito</button>
     `;
   }
 });
