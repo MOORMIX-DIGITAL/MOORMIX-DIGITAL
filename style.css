@@ -1,191 +1,41 @@
-/* Reset básico */
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #f4f4f4;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
+header {
+  background-color: #222;
+  color: white;
+  text-align: center;
   padding: 20px;
 }
 
-/* Encabezado */
-header {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 30px 20px;
-  text-align: center;
-  border-radius: 10px;
-  margin-bottom: 30px;
+section.producto {
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2em;
-  font-weight: 300;
-}
-
-/* Sección de productos */
-#productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-/* Tarjeta de producto */
-#productos div {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-#productos div:hover {
-  transform: scale(1.03);
-}
-
-#productos img {
+section.producto img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
 }
 
-#productos h2 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#productos p {
-  font-size: 1em;
-  color: #555;
-}
-
-/* Pie de página */
 footer {
-  margin-top: 40px;
   text-align: center;
-  color: #777;
-}
-
-/* Menú de navegación */
-nav {
-  background-color: #333;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
-/* Menú de navegación */
-nav {
-  background-color: #333;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
   padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-  font-family: Arial, sans-serif;
-  white-space: pre-wrap;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%;
-  max-width: 500px;
-  font-family: Arial, sans-serif;
-  white-space: pre-wrap;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
+  background-color: #ddd;
 }
