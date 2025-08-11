@@ -100,3 +100,25 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.appendChild(nota);
   }
 });
+function mostrarCatalogo(marcaSeleccionada) {
+  const productos = [/* tu array de productos */];
+  const catalogo = document.getElementById("catalogo");
+  catalogo.innerHTML = "";
+
+  const productosFiltrados = productos.filter(p => p.marca === marcaSeleccionada);
+  productosFiltrados.forEach(producto => {
+    const tarjeta = document.createElement("div");
+    tarjeta.className = "producto";
+
+    tarjeta.innerHTML = `
+      <img src="${producto.imagen}" alt="${producto.nombre}">
+      <h3>${producto.nombre}</h3>
+      <p>${producto.descripcion}</p>
+      <p><strong>${producto.precio}</strong></p>
+      <button>Comprar ahora</button>
+    `;
+
+    catalogo.appendChild(tarjeta);
+  });
+}
+
