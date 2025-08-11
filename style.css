@@ -111,3 +111,23 @@ body {
   color: #333;
   font-weight: bold;
 }
+
+.marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.marcas img {
+  width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.marcas img:hover {
+  transform: scale(1.1);
+}
