@@ -53,17 +53,6 @@ function deslizarMarcas(direccion) {
   });
 }
 
-// Carrusel automático en bucle cada 3 segundos
-setInterval(() => {
-  const contenedor = document.getElementById("marcasContainer");
-  const maxScroll = contenedor.scrollWidth - contenedor.clientWidth;
-  if (contenedor.scrollLeft >= maxScroll) {
-    contenedor.scrollTo({ left: 0, behavior: "smooth" }); // reinicia al inicio
-  } else {
-    deslizarMarcas(1);
-  }
-}, 3000);
-
 let intervaloCarrusel;
 
 function iniciarCarrusel() {
