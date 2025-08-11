@@ -228,3 +228,7 @@ header {
 .nav-links a:hover {
   color: #00ffff;
 }
+
+.contenedor {
+  margin-top: 120px;
+}
