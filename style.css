@@ -148,3 +148,54 @@ footer {
   height: auto;
   margin-bottom: 10px;
 }
+
+.marcas-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.flecha {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.flecha:hover {
+  background-color: #555;
+}
+
+.marcas-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.marca {
+  flex: 0 0 auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.marca:hover {
+  transform: scale(1.05);
+}
+
+.marca img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
