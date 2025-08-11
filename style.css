@@ -18,13 +18,16 @@ body {
 }
 
 .contenedor {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .buscador {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 20px;
+  background: #eaeaea;
   margin-bottom: 20px;
 }
 
