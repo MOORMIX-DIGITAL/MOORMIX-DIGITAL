@@ -166,3 +166,10 @@ footer {
 .flecha.derecha {
   right: 10px;
 }
+
+.marca img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+}
