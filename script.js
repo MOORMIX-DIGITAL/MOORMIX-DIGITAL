@@ -63,3 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 });
+
+document.querySelectorAll("button").forEach(boton => {
+  boton.addEventListener("click", () => {
+    document.getElementById("formulario-pago").style.display = "flex";
+  });
+});
+
+document.querySelector(".cerrar").addEventListener("click", () => {
+  document.getElementById("formulario-pago").style.display = "none";
+});
