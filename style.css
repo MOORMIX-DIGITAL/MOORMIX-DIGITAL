@@ -2,13 +2,63 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #f4f4f4;
   margin: 0;
-  padding: 2rem;
+  padding: 0;
   color: #333;
+}
+
+header {
+  background: #ff3c3c;
+  padding: 1rem;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.catalog {
+  padding: 2rem;
+  background: #fff;
+}
+
+.catalog h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.product-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .contract-section {
   max-width: 700px;
-  margin: auto;
+  margin: 2rem auto;
   background: white;
   padding: 2rem;
   border-radius: 12px;
