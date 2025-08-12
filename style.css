@@ -183,6 +183,7 @@ body {
   height: 150px;
   object-fit: contain;
   margin-bottom: 0.5rem;
+  display: block;
 }
 
 .producto h3 {
