@@ -6,8 +6,10 @@
   <title>MOORMIX DIGITAL</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  <script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
+<script>
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('dragstart', e => e.preventDefault());
+  });
 </script>
 
 <body>
