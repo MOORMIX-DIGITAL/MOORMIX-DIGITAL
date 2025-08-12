@@ -6,19 +6,45 @@
   <title>MOORMIX DIGITAL</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<script>
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('dragstart', e => e.preventDefault());
-  });
-</script>
+<body oncontextmenu="return false">
+  <!-- Encabezado -->
+  <div class="encabezado">
+    <h1>MOORMIX DIGITAL</h1>
+    <p class="eslogan">Tu tienda de tecnología</p>
+  </div>
 
-<body>
+  <!-- Catálogo -->
+  <section class="catalogo">
+    <div class="producto">
+      <img src="samsung-galaxy-a06.png" alt="Samsung Galaxy A06" class="imagen-producto" draggable="false">
+      <h3>Samsung Galaxy A06</h3>
+      <p>$130</p>
+    </div>
+    <!-- Repite para los demás productos -->
+  </section>
+
+  <!-- Buscador -->
+  <div class="buscador-container">
+    <img src="lupa.png" alt="Buscar" class="icono-lupa" />
+    <input type="text" id="buscador" placeholder="Buscar productos..." />
+  </div>
+
+  <!-- Scripts -->
   <script>
-  document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('dragstart', e => e.preventDefault());
-  });
-</script>
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('dragstart', e => e.preventDefault());
+    });
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+</body>
+</html>
 
+  <!-- Bloquea clic derecho -->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+</body>
+ 
   <!-- Aquí puede estar tu encabezado -->
   <div class="encabezado">
     <h1>MOORMIX DIGITAL</h1>
