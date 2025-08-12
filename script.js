@@ -52,20 +52,6 @@ lupa.addEventListener("click", () => {
     }
   });
 });
-document.querySelectorAll(".producto").forEach(card => {
-  card.style.cursor = "pointer"; // Opcional: cambia el cursor al pasar
-  card.addEventListener("click", () => {
-    const img = card.querySelector(".imagen-producto");
-    const modelo = img.dataset.model;
-    const ficha = fichas[modelo];
-    if (ficha) {
-      modalTitle.textContent = ficha.nombre;
-      modalImage.src = img.src;
-      modalPrice.textContent = ficha.memoria[0];
-      modal.style.display = "block";
-    }
-  });
-});
 
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("modal");
@@ -95,7 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // Agrega más modelos aquí...
   };
-
+document.querySelectorAll(".producto").forEach(card => {
+  card.style.cursor = "pointer"; // Opcional: cambia el cursor al pasar
+  card.addEventListener("click", () => {
+    const img = card.querySelector(".imagen-producto");
+    const modelo = img.dataset.model;
+    const ficha = fichas[modelo];
+    if (ficha) {
+      modalTitle.textContent = ficha.nombre;
+      modalImage.src = img.src;
+      modalPrice.textContent = ficha.memoria[0];
+      modal.style.display = "block";
+    }
+  });
+});
+  
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
