@@ -67,3 +67,81 @@ body {
   text-align: center;
   font-weight: bold;
 }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+}
+
+.encabezado {
+  text-align: center;
+  background: #ff3c3c;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.eslogan {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.buscador-container {
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.buscador-container:hover,
+.buscador-container.active {
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.icono-lupa {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+#buscador {
+  flex: 1;
+  height: 100%;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+}
+
+.catalogo {
+  margin: 5rem 1rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.producto {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+}
