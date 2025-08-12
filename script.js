@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
-
   // Cerrar el modal al hacer clic fuera del contenido
   window.addEventListener("click", (event) => {
     if (event.target === modal) {
@@ -82,17 +81,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
 document.querySelectorAll(".producto").forEach(card => {
   card.addEventListener("click", () => {
     // lógica para mostrar el modal
   });
 });
-
     document.getElementById("modal-title").textContent = title;
     document.getElementById("modal-image").src = imageSrc;
     document.getElementById("modal-price").textContent = price;
-
     document.getElementById("modal").style.display = "block";
   });
 });
