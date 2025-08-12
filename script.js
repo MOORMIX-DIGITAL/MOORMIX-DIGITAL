@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const imagenes = document.querySelectorAll(".imagen-producto");
 
   imagenes.forEach((img) => {
-    // Verifica si la imagen es del HONOR X6C
+    // Verifica si la imagen es del Samsung Galaxy A06
     if (img.src.includes("samsung-galaxy-a06")) {
       img.style.cursor = "pointer"; // Cambia el cursor
       img.addEventListener("click", () => {
