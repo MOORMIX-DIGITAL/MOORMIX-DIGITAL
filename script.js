@@ -1,8 +1,3 @@
-const buscador = document.getElementById("buscador");
-const contenedor = document.querySelector(".buscador-container");
-const productos = document.querySelectorAll(".producto");
-
-let activo = false;
 
 contenedor.addEventListener("mouseenter", () => {
   contenedor.classList.add("active");
