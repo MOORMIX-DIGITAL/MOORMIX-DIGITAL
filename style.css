@@ -11,6 +11,18 @@ body {
   padding: 2rem 1rem;
 }
 
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+.espaciador {
+  flex-grow: 1;
+}
+
 .encabezado h1 {
   margin: 0;
   font-size: 2.5rem;
