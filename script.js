@@ -92,6 +92,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.querySelectorAll(".producto").forEach(card => {
+  card.addEventListener("click", () => {
+    const title = card.querySelector("h2").textContent;
+    const imageSrc = card.querySelector("img").src;
+    const price = card.querySelector(".precio").textContent;
+
+    document.getElementById("modal-title").textContent = title;
+    document.getElementById("modal-image").src = imageSrc;
+    document.getElementById("modal-price").textContent = price;
+
+    document.getElementById("modal").style.display = "block";
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("modal");
   const modalContent = modal.querySelector(".modal-content");
