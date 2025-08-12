@@ -1,4 +1,4 @@
-body {
+ve a rebody {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #f4f4f4;
@@ -21,6 +21,24 @@ body {
 
 .espaciador {
   flex-grow: 1;
+}
+
+.boton-precio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ff3c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0.5rem;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 .encabezado h1 {
