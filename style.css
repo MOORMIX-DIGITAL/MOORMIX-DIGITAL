@@ -131,3 +131,10 @@ body {
 .marcas img:hover {
   transform: scale(1.1);
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
