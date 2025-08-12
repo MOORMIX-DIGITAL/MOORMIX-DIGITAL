@@ -53,3 +53,10 @@ buscador.addEventListener("blur", () => {
     }, 1000);
   }
 });
+
+const lupa = document.querySelector(".icono-lupa");
+
+lupa.addEventListener("click", () => {
+  buscador.focus();
+  contenedor.classList.add("active");
+});
