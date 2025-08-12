@@ -13,6 +13,12 @@
 </script>
 
 <body>
+  <script>
+  document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('dragstart', e => e.preventDefault());
+  });
+</script>
+
   <!-- Aquí puede estar tu encabezado -->
   <div class="encabezado">
     <h1>MOORMIX DIGITAL</h1>
