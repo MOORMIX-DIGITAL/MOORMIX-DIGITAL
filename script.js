@@ -147,18 +147,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelectorAll(".producto").forEach(card => {
   card.style.cursor = "pointer"; // Opcional: cambia el cursor al pasar
-  card.addEventListener("click", () => {
-    const img = card.querySelector(".imagen-producto");
-    const modelo = img.dataset.model;
-    const ficha = fichas[modelo];
-    if (ficha) {
-      modalTitle.textContent = ficha.nombre;
-      modalImage.src = img.src;
-      modalPrice.textContent = ficha.memoria[0];
-      modal.style.display = "block";
-    }
-  });
+card.addEventListener("click", () => {
+  const img = card.querySelector(".imagen-producto");
+  const modelo = img.dataset.model;
+  const ficha = fichas[modelo];
+  if (ficha) {
+    modalTitle.textContent = ficha.nombre;
+    modalImage.src = img.src;
+    modalPrice.textContent = ficha.memoria[0];
+    modal.style.display = "block";
+  }
 });
+
+  function mostrarFicha(modelo) {
+  const ficha = fichas[modelo];
+  if (ficha) {
+    modalTitle.textContent = ficha.nombre;
+  const img = document.querySelector(`[data-model="${modelo}"]`);
+modalImage.src = img.src;
+    modalPrice.textContent = ficha.memoria[0];
+    modal.style.display = "block";
+  }
+}
 
 document.querySelectorAll('.boton-precio').forEach(button => {
   button.addEventListener('click', function () {
