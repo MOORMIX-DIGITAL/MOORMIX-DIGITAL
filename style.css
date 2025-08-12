@@ -103,3 +103,52 @@ form button {
 form button:hover {
   background: #e62e2e;
 }
+
+.catalogo {
+  padding: 2rem;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.catalogo h2 {
+  font-size: 2rem;
+  color: #ff3c3c;
+  margin-bottom: 2rem;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.producto {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.producto p {
+  font-size: 1rem;
+  color: #555;
+}
