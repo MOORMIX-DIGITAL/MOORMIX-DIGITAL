@@ -286,3 +286,31 @@ img {
 .texto-precio {
   font-weight: bold;
 }
+
+.boton-precio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background-color: #ff3c3c;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.icono-carrito {
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+
+.texto-precio {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
