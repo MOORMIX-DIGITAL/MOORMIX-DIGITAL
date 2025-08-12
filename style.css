@@ -215,3 +215,14 @@ img {
   pointer-events: none;
   user-select: none;
 }
+
+.precio {
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.producto:hover .precio {
+  color: #ff3c3c;
+  text-shadow: 0 0 8px rgba(255, 60, 60, 0.6);
+}
