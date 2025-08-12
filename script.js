@@ -91,3 +91,66 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("modal");
+  const modalContent = modal.querySelector(".modal-content");
+  const closeBtn = modal.querySelector(".close");
+
+  // Fichas técnicas por modelo
+  const fichas = {
+    "galaxy-a06": {
+      nombre: "Samsung Galaxy A06",
+      pantalla: ["Tipo: PLS LCD", "Tamaño: 6.5\"", "Resolución: 720 x 1600"],
+      memoria: ["Interna: 64 GB"],
+      camara: ["Frontal: 5 MP", "Trasera: 13 MP + 2 MP"],
+      servicios: ["Reconocimiento facial"],
+      adicionales: ["Envío gratis"],
+      generales: ["Android 14", "Procesador Octa-core"]
+    },
+    "hot-50": {
+      nombre: "Infinix Hot 50",
+      pantalla: ["Tipo: IPS LCD", "Tamaño: 6.78\"", "Resolución: 1080 x 2460"],
+      memoria: ["Interna: 128 GB"],
+      camara: ["Frontal: 8 MP", "Trasera: 50 MP + AI Lens"],
+      servicios: ["Huella digital lateral"],
+      adicionales: ["Envío gratis"],
+      generales: ["Android 13", "Procesador Helio G88"]
+    }
+    // Agrega más modelos aquí...
+  };
+
+  // Evento para abrir el modal
+  document.querySelectorAll(".imagen-producto").forEach((img) => {
+    img.style.cursor = "pointer";
+    img.addEventListener("click", () => {
+      const modelo = img.dataset.model;
+      const ficha = fichas[modelo];
+
+      if (ficha) {
+        modalContent.innerHTML = `
+          <span class="close">&times;</span>
+          <h2>Ficha Técnica: ${ficha.nombre}</h2>
+          <h3>Pantalla</h3><ul>${ficha.pantalla.map(item => `<li>${item}</li>`).join("")}</ul>
+          <h3>Memoria</h3><ul>${ficha.memoria.map(item => `<li>${item}</li>`).join("")}</ul>
+          <h3>Cámara</h3><ul>${ficha.camara.map(item => `<li>${item}</li>`).join("")}</ul>
+          <h3>Servicios</h3><ul>${ficha.servicios.map(item => `<li>${item}</li>`).join("")}</ul>
+          <h3>Adicionales</h3><ul>${ficha.adicionales.map(item => `<li>${item}</li>`).join("")}</ul>
+          <h3>Generales</h3><ul>${ficha.generales.map(item => `<li>${item}</li>`).join("")}</ul>
+        `;
+        modal.style.display = "block";
+      }
+    });
+  });
+
+  // Cerrar el modal
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
