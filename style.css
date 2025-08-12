@@ -314,3 +314,46 @@ img {
   font-weight: bold;
   font-size: 0.9rem;
 }
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-bottom: 1rem; /* espacio desde el borde inferior */
+}
+
+.espaciador {
+  flex-grow: 1;
+}
+
+.boton-precio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #ff3c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 0.5rem;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.boton-precio:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 60, 60, 0.5);
+}
+
+.icono-carrito {
+  font-size: 1.2rem;
+}
+
+.texto-precio {
+  font-weight: bold;
+}
