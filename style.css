@@ -1,142 +1,55 @@
 body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
   margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.encabezado {
-  background-color: #333;
-  color: white;
-  padding: 1rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-}
-
-.hamburguesa {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-}
-
-.eslogan {
-  margin-top: 4rem;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.contenedor {
-  margin-top: 6rem;
-  padding: 1rem;
-}
-
-.buscador {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.lupa-container input {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.lupa-container {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.lupa {
-  width: 24px;
-  height: 24px;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #444;
-    position: absolute;
-    top: 3.5rem;
-    right: 1rem;
-    padding: 1rem;
-  }
-
-  .hamburguesa {
-    display: block;
-  }
-}
-
-.catalogo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.producto {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  background-color: #f9f9f9;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.producto img {
-  width: 100px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-.producto h3 {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-}
-
-.producto p {
+  padding: 2rem;
   color: #333;
+}
+
+.contract-section {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.contract-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contract-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
   font-weight: bold;
 }
 
-.marcas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+form input[type="file"] {
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
-.marcas img {
-  width: 150px;
-  height: auto;
+form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: #ff3c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.marcas img:hover {
-  transform: scale(1.1);
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+form button:hover {
+  background: #e62e2e;
 }
