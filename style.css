@@ -357,14 +357,6 @@ img {
   font-size: 0.9rem;
 }
 
-.producto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 280px;
-  padding-bottom: 1rem; /* espacio desde el borde inferior */
-}
-
 .productos-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -392,15 +384,6 @@ img {
   margin-top: 0.5rem;
   height: 40px;
   box-sizing: border-box;
-}
-
-.boton-precio:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(255, 60, 60, 0.5);
-}
-
-.icono-carrito {
-  font-size: 1.2rem;
 }
 
 .texto-precio {
