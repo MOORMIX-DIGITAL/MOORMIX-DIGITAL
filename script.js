@@ -26,10 +26,6 @@ buscador.addEventListener("blur", () => {
   }
 });
 
-const buscador = document.getElementById("buscador");
-const contenedor = document.querySelector(".buscador-container");
-const productos = document.querySelectorAll(".producto");
-
 let activo = false;
 
 contenedor.addEventListener("mouseenter", () => {
@@ -94,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.querySelectorAll(".producto").forEach(card => {
   card.addEventListener("click", () => {
-    const title = card.querySelector("h2").textContent;
-    const imageSrc = card.querySelector("img").src;
-    const price = card.querySelector(".precio").textContent;
+    // lógica para mostrar el modal
+  });
+});
 
     document.getElementById("modal-title").textContent = title;
     document.getElementById("modal-image").src = imageSrc;
@@ -108,10 +104,11 @@ document.querySelectorAll(".producto").forEach(card => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("modal");
-  const modalContent = modal.querySelector(".modal-content");
-  const closeBtn = modal.querySelector(".close");
+  const modalTitle = document.getElementById("modal-title");
+  const modalImage = document.getElementById("modal-image");
+  const modalPrice = document.getElementById("modal-price");
+  const closeBtn = document.querySelector(".close");
 
-  // Fichas técnicas por modelo
   const fichas = {
     "galaxy-a06": {
       nombre: "Samsung Galaxy A06",
@@ -134,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Agrega más modelos aquí...
   };
 
-  // Evento para abrir el modal
   document.querySelectorAll(".imagen-producto").forEach((img) => {
     img.style.cursor = "pointer";
     img.addEventListener("click", () => {
@@ -142,22 +138,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const ficha = fichas[modelo];
 
       if (ficha) {
-        modalContent.innerHTML = `
-          <span class="close">&times;</span>
-          <h2>Ficha Técnica: ${ficha.nombre}</h2>
-          <h3>Pantalla</h3><ul>${ficha.pantalla.map(item => `<li>${item}</li>`).join("")}</ul>
-          <h3>Memoria</h3><ul>${ficha.memoria.map(item => `<li>${item}</li>`).join("")}</ul>
-          <h3>Cámara</h3><ul>${ficha.camara.map(item => `<li>${item}</li>`).join("")}</ul>
-          <h3>Servicios</h3><ul>${ficha.servicios.map(item => `<li>${item}</li>`).join("")}</ul>
-          <h3>Adicionales</h3><ul>${ficha.adicionales.map(item => `<li>${item}</li>`).join("")}</ul>
-          <h3>Generales</h3><ul>${ficha.generales.map(item => `<li>${item}</li>`).join("")}</ul>
-        `;
+        modalTitle.textContent = ficha.nombre;
+        modalImage.src = img.src;
+        modalPrice.textContent = ficha.memoria[0]; // Puedes mostrar más datos si quieres
         modal.style.display = "block";
       }
     });
   });
 
-  // Cerrar el modal
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
