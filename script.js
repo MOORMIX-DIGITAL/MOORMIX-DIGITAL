@@ -21,41 +21,12 @@ buscador.addEventListener("blur", () => {
   }
 });
 
-let activo = false;
-
-contenedor.addEventListener("mouseenter", () => {
-  contenedor.classList.add("active");
-  activo = true;
-});
-
-buscador.addEventListener("input", () => {
-  const texto = buscador.value.toLowerCase();
-  productos.forEach(p => {
-    const nombre = p.dataset.nombre.toLowerCase();
-    p.style.display = nombre.includes(texto) ? "block" : "none";
-  });
-});
-
-buscador.addEventListener("blur", () => {
-  if (buscador.value === "") {
-    activo = false;
-    setTimeout(() => {
-      if (!activo) contenedor.classList.remove("active");
-    }, 1000);
-  }
-});
-
 const lupa = document.querySelector(".icono-lupa");
 
 lupa.addEventListener("click", () => {
   buscador.focus();
   contenedor.classList.add("active");
 });
-
-// Espera a que el DOM esté cargado
-document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("modal");
-  const closeBtn = document.querySelector(".close");
 
   // Encuentra todas las imágenes de productos
   const imagenes = document.querySelectorAll(".imagen-producto");
@@ -82,10 +53,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 document.querySelectorAll(".producto").forEach(card => {
+  card.style.cursor = "pointer"; // Opcional: cambia el cursor al pasar
   card.addEventListener("click", () => {
-    // lógica para mostrar el modal
+    const img = card.querySelector(".imagen-producto");
+    const modelo = img.dataset.model;
+    const ficha = fichas[modelo];
+    if (ficha) {
+      modalTitle.textContent = ficha.nombre;
+      modalImage.src = img.src;
+      modalPrice.textContent = ficha.memoria[0];
+      modal.style.display = "block";
+    }
   });
 });
+
     document.getElementById("modal-title").textContent = title;
     document.getElementById("modal-image").src = imageSrc;
     document.getElementById("modal-price").textContent = price;
