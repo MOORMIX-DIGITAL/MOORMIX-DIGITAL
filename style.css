@@ -210,6 +210,11 @@ body {
   font-weight: bold;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  box-sizing: border-box;
 }
 
 .producto:hover {
@@ -348,8 +353,8 @@ img {
 .producto {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
+  justify-content: space-between;
+  height: 280px;
   padding-bottom: 1rem; /* espacio desde el borde inferior */
 }
 
