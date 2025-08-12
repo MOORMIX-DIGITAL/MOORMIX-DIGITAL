@@ -160,3 +160,10 @@ document.querySelectorAll(".producto").forEach(card => {
   });
 });
 
+document.querySelectorAll('.boton-precio').forEach(button => {
+  button.addEventListener('click', function () {
+    const producto = this.closest('.producto');
+    const modelo = producto.querySelector('.imagen-producto').getAttribute('data-model');
+    mostrarFicha(modelo);
+  });
+});
