@@ -50,7 +50,13 @@ body {
 }
 
 .buscador {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lupa-container input {
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .lupa-container {
