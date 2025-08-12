@@ -124,6 +124,12 @@ ve a rebody {
   font-weight: bold;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px
+  box-sizing: border-box;
+  margin: 20px;
 }
 
 .producto:hover {
@@ -213,8 +219,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
+  height: 340px;
   box-sizing: border-box;
+  margin: 20px;
 }
 
 .producto:hover {
@@ -356,6 +363,13 @@ img {
   justify-content: space-between;
   height: 280px;
   padding-bottom: 1rem; /* espacio desde el borde inferior */
+}
+
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
 }
 
 .espaciador {
