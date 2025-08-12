@@ -67,13 +67,6 @@ document.querySelectorAll(".producto").forEach(card => {
   });
 });
 
-    document.getElementById("modal-title").textContent = title;
-    document.getElementById("modal-image").src = imageSrc;
-    document.getElementById("modal-price").textContent = price;
-    document.getElementById("modal").style.display = "block";
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("modal");
   const modalTitle = document.getElementById("modal-title");
