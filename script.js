@@ -96,21 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Agrega más modelos aquí...
   };
 
-  document.querySelectorAll(".imagen-producto").forEach((img) => {
-    img.style.cursor = "pointer";
-    img.addEventListener("click", () => {
-      const modelo = img.dataset.model;
-      const ficha = fichas[modelo];
-
-      if (ficha) {
-        modalTitle.textContent = ficha.nombre;
-        modalImage.src = img.src;
-        modalPrice.textContent = ficha.memoria[0]; // Puedes mostrar más datos si quieres
-        modal.style.display = "block";
-      }
-    });
-  });
-
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
