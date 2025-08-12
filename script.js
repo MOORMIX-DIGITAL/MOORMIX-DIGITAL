@@ -28,19 +28,6 @@ lupa.addEventListener("click", () => {
   contenedor.classList.add("active");
 });
 
-  // Encuentra todas las imágenes de productos
-  const imagenes = document.querySelectorAll(".imagen-producto");
-
-  imagenes.forEach((img) => {
-    // Verifica si la imagen es del HONOR X6C
-    if (img.src.includes("honor-x6c")) {
-      img.style.cursor = "pointer"; // Cambia el cursor
-      img.addEventListener("click", () => {
-        modal.style.display = "block";
-      });
-    }
-  });
-
   // Cerrar el modal al hacer clic en la X
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
@@ -59,7 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImage = document.getElementById("modal-image");
   const modalPrice = document.getElementById("modal-price");
   const closeBtn = document.querySelector(".close");
+  
+  // Encuentra todas las imágenes de productos
+  const imagenes = document.querySelectorAll(".imagen-producto");
 
+  imagenes.forEach((img) => {
+    // Verifica si la imagen es del HONOR X6C
+    if (img.src.includes("samsung-galaxy-a06")) {
+      img.style.cursor = "pointer"; // Cambia el cursor
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+      });
+    }
+  });
+  
   const fichas = {
     "galaxy-a06": {
       nombre: "Samsung Galaxy A06",
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // Agrega más modelos aquí...
   };
+
 document.querySelectorAll(".producto").forEach(card => {
   card.style.cursor = "pointer"; // Opcional: cambia el cursor al pasar
   card.addEventListener("click", () => {
@@ -95,7 +96,7 @@ document.querySelectorAll(".producto").forEach(card => {
     }
   });
 });
-  
+
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
