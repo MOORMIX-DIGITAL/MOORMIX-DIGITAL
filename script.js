@@ -1,18 +1,27 @@
-document.getElementById('contract-upload').addEventListener('submit', function(e) {
-  e.preventDefault();
+const buscador = document.getElementById("buscador");
+const contenedor = document.querySelector(".buscador-container");
+const productos = document.querySelectorAll(".producto");
 
-  alert("Documentos enviados. Te contactaremos por WhatsApp para verificar identidad y firma.");
+let activo = false;
 
-  const numeroVendedor = "593XXXXXXXX"; // Reemplaza con tu número de WhatsApp
-  const mensaje = "Nuevo contrato físico subido con foto del cliente. Verifica identidad y firma.";
-  window.open(`https://wa.me/${numeroVendedor}?text=${encodeURIComponent(mensaje)}`, '_blank');
+contenedor.addEventListener("mouseenter", () => {
+  contenedor.classList.add("active");
+  activo = true;
 });
 
-document.getElementById('contract-upload')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert("Documentos enviados. Te contactaremos por WhatsApp para verificar identidad y firma.");
+buscador.addEventListener("input", () => {
+  const texto = buscador.value.toLowerCase();
+  productos.forEach(p => {
+    const nombre = p.dataset.nombre.toLowerCase();
+    p.style.display = nombre.includes(texto) ? "block" : "none";
+  });
+});
 
-  const numeroVendedor = "593XXXXXXXX"; // Reemplaza con tu número real
-  const mensaje = "Nuevo contrato físico subido. Verifica identidad y firma.";
-  window.open(`https://wa.me/${numeroVendedor}?text=${encodeURIComponent(mensaje)}`, '_blank');
+buscador.addEventListener("blur", () => {
+  if (buscador.value === "") {
+    activo = false;
+    setTimeout(() => {
+      if (!activo) contenedor.classList.remove("active");
+    }, 1000);
+  }
 });
