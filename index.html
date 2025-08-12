@@ -13,6 +13,16 @@
     <p class="eslogan">Tu tienda de tecnología</p>
   </div>
 
+  <!-- Modal emergente -->
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000;">
+  <div style="background:#fff; margin:10% auto; padding:20px; width:80%; max-width:400px; position:relative;">
+    <span class="close" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:24px;">×</span>
+    <h2 id="modal-title"></h2>
+    <img id="modal-image" style="width:100%; height:auto;" />
+    <p id="modal-price" style="font-weight:bold;"></p>
+  </div>
+</div>
+
   <!-- Buscador -->
   <div class="buscador-container">
     <img src="lupa.png" alt="Buscar" class="icono-lupa" />
@@ -31,16 +41,16 @@
 </button>
     </div>
     <div class="producto" data-nombre="Samsung Galaxy A16">
-      <img src="samsung-galaxy-a16.png" alt="Samsung Galaxy A16" class="imagen-producto" draggable="false">
+      <img src="samsung-galaxy-a16.png" class="imagen-producto" data-model="galaxy-a16">
       <h3>Samsung Galaxy A16</h3>
       <div class="espaciador"></div>
-<button class="boton-precio">
+      <button class="boton-precio">
   <span class="icono-carrito">🛒</span>
   <span class="texto-precio">$130</span>
 </button>
     </div>
     <div class="producto">
-      <img src="samsung-galaxy-a55-5g.png" alt="Samsung Galaxy A55 5G" class="imagen-producto" draggable="false">
+      <img src="samsung-galaxy-a55-5g.png" class="imagen-producto" data-model="galaxy-a55-5g">
       <h3>Samsung Galaxy A55 5G</h3>
       <div class="espaciador"></div>
 <button class="boton-precio">
@@ -49,7 +59,7 @@
 </button>
     </div>
         <div class="producto">
-      <img src="infinix-smart-9.png" alt="Infinix Smart 9" class="imagen-producto" draggable="false">
+      <img src="infinix-smart-9.png" class="imagen-producto" date-model="galaxy-9">
       <h3>Infinix Smart 9</h3>
       <div class="espaciador"></div>
 <button class="boton-precio">
@@ -58,7 +68,7 @@
 </button>
     </div>
     <div class="producto">
-      <img src="infinix-smart-9-hd.png" alt="Infinix Smart 9 HD" class="imagen-producto" draggable="false">
+      <img src="infinix-smart-9-hd.png" class="imagen-producto" data-model="smart-9-hd">
       <h3>Infinix Smart 9 HD</h3>
       <div class="espaciador"></div>
 <button class="boton-precio">
@@ -130,6 +140,7 @@
 </button>
     </div>
   </section>
+  <script src="script.js"></script>
 
   <!-- Modal -->
 <div id="modal" class="modal">
