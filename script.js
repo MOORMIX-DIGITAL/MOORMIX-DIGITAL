@@ -78,7 +78,70 @@ document.addEventListener("DOMContentLoaded", function () {
       servicios: ["Huella digital lateral"],
       adicionales: ["Envío gratis"],
       generales: ["Android 13", "Procesador Helio G88"]
-    }
+    },
+    "galaxy-a16": {
+  nombre: "Samsung Galaxy A16",
+  pantalla: ["Tipo: PLS LCD", "Tamaño: 6.5\"", "Resolución: 720 x 1600"],
+  memoria: ["Interna: 128 GB"],
+  camara: ["Frontal: 8 MP", "Trasera: 50 MP + 2 MP"],
+  servicios: ["Reconocimiento facial"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 14", "Procesador Octa-core"]
+},
+"galaxy-a55-5g": {
+  nombre: "Samsung Galaxy A55 5G",
+  pantalla: ["Tipo: Super AMOLED", "Tamaño: 6.6\"", "Resolución: 1080 x 2340"],
+  memoria: ["Interna: 256 GB"],
+  camara: ["Frontal: 32 MP", "Trasera: 50 MP + 12 MP + 5 MP"],
+  servicios: ["Huella bajo pantalla"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 14", "Procesador Exynos 1480"]
+},
+"infinix-smart-9": {
+  nombre: "Infinix Smart 9",
+  pantalla: ["Tipo: IPS LCD", "Tamaño: 6.6\"", "Resolución: 720 x 1612"],
+  memoria: ["Interna: 64 GB"],
+  camara: ["Frontal: 8 MP", "Trasera: 13 MP + AI Lens"],
+  servicios: ["Huella digital lateral"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 13", "Procesador Unisoc T606"]
+},
+"infinix-smart-9-hd": {
+  nombre: "Infinix Smart 9 HD",
+  pantalla: ["Tipo: IPS LCD", "Tamaño: 6.6\"", "Resolución: 720 x 1612"],
+  memoria: ["Interna: 64 GB"],
+  camara: ["Frontal: 8 MP", "Trasera: 8 MP + AI Lens"],
+  servicios: ["Reconocimiento facial"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 13", "Procesador Unisoc SC9863A"]
+},
+"infinix-hot-60-pro": {
+  nombre: "Infinix Hot 60 Pro",
+  pantalla: ["Tipo: IPS LCD", "Tamaño: 6.78\"", "Resolución: 1080 x 2460"],
+  memoria: ["Interna: 256 GB"],
+  camara: ["Frontal: 8 MP", "Trasera: 108 MP + AI Lens"],
+  servicios: ["Huella lateral"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 14", "Procesador Helio G99 Ultimate"]
+},
+"infinix-hot-60-pro-plus": {
+  nombre: "Infinix Hot 60 Pro+",
+  pantalla: ["Tipo: IPS LCD", "Tamaño: 6.78\"", "Resolución: 1080 x 2460"],
+  memoria: ["Interna: 256 GB"],
+  camara: ["Frontal: 8 MP", "Trasera: 108 MP + AI Lens"],
+  servicios: ["Huella lateral"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 14", "Procesador Helio G99 Ultimate"]
+},
+"infinix-hot-60¡": {
+  nombre: "Infinix Hot 60¡",
+  pantalla: ["Tipo: IPS LCD", "Tamaño: 6.78\"", "Resolución: 1080 x 2460"],
+  memoria: ["Interna: 128 GB"],
+  camara: ["Frontal: 8 MP", "Trasera: 50 MP + AI Lens"],
+  servicios: ["Huella lateral"],
+  adicionales: ["Envío gratis"],
+  generales: ["Android 14", "Procesador Helio G88"]
+}
     // Agrega más modelos aquí...
   };
 
