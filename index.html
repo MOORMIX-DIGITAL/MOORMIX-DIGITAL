@@ -3,80 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOORMIX DIGITAL</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>Contrato MOORMIX DIGITAL</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="encabezado">
-    <nav class="navbar">
-      <h1 class="logo">MOORMIX DIGITAL</h1>
-      <button class="hamburguesa" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <p class="eslogan">Productos tecnológicos a tu alcance</p>
-  </header>
 
-  <div class="contenedor">
-    <aside class="buscador">
-      <div class="lupa-container">
-        <img src="lupa.png" alt="Buscar" class="lupa" />
-        <input type="text" placeholder="Buscar..." oninput="filtrarProductos()" />
-      </div>
-    </aside>
-    <div class="buscador">
-  <div class="lupa-container">
-    <input type="text" placeholder="Buscar..." />
-    <img src="lupa.png" alt="Buscar" class="lupa" />
-  </div>
-</div>
+  <section class="contract-section">
+    <h2>Contrato de Crédito MOORMIX DIGITAL</h2>
+    <p>Este contrato establece los términos y condiciones para la compra a crédito de productos ofrecidos por MOORMIX DIGITAL.</p>
 
-    <div class="marcas">
-  <img src="redmi.png" alt="Redmi" />
-  <img src="samsung.png" alt="Samsung" />
-  <img src="infinix.png" alt="Infinix" />
-  <img src="tecno.png" alt="Tecno" />
-  <img src="ZTE.png" alt="ZTE" />
-</div>
-
-    <div class="catalogo">
-  <div class="producto">
-    <img src="redmi.png" alt="Redmi Note 12" />
-    <h3>Redmi Note 12</h3>
-    <p>Precio: $199</p>
-  </div>
-  <div class="producto">
-    <img src="samsung.png" alt="Samsung Galaxy A14" />
-    <h3>Samsung Galaxy A14</h3>
-    <p>Precio: $229</p>
-  </div>
-  <div class="producto">
-    <img src="infinix.png" alt="Infinix Hot 30" />
-    <h3>Infinix Hot 30</h3>
-    <p>Precio: $179</p>
-  </div>
-  <div class="producto">
-    <img src="tecno.png" alt="Tecno Spark 10" />
-    <h3>Tecno Spark 10</h3>
-    <p>Precio: $159</p>
-  </div>
-  <div class="producto">
-    <img src="ZTE.png" alt="ZTE Blade V30" />
-    <h3>ZTE Blade V30</h3>
-    <p>Precio: $189</p>
-  </div>
-</div>
-
-    <div class="marcas-wrapper">
-      <!-- Carrusel de marcas -->
-      <!-- Aquí puedes agregar tus imágenes de marcas -->
+    <div class="contract-content">
+      <p>
+        [Aquí puedes insertar el texto completo del contrato: cláusulas, condiciones de pago, plazos, penalidades, etc.]
+      </p>
     </div>
 
-    <!-- Aquí puedes agregar más contenido como productos, secciones, etc. -->
-  </div>
+    <h3>Documentos requeridos</h3>
+    <form id="contract-upload" enctype="multipart/form-data">
+      <label>📄 Subir contrato firmado</label>
+      <input type="file" accept=".pdf,.jpg,.png" required />
+
+      <label>🪪 Subir foto de la cédula</label>
+      <input type="file" accept=".jpg,.png" required />
+
+      <label>📸 Subir foto del cliente mostrando la cédula</label>
+      <input type="file" accept=".jpg,.png" required />
+
+      <button type="submit">Enviar para verificación</button>
+    </form>
+  </section>
 
   <script src="script.js"></script>
 </body>
