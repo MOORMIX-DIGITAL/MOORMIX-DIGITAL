@@ -205,3 +205,13 @@ body {
   margin-bottom: 0.5rem;
   display: block;
 }
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
