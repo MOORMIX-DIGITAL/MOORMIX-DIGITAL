@@ -13,91 +13,48 @@
     <p class="eslogan">Tu tienda de tecnología</p>
   </div>
 
-  <!-- Catálogo -->
-  <section class="catalogo">
-    <div class="producto">
-      <img src="samsung-galaxy-a06.png" alt="Samsung Galaxy A06" class="imagen-producto" draggable="false">
-      <h3>Samsung Galaxy A06</h3>
-      <p>$130</p>
-    </div>
-    <!-- Repite para los demás productos -->
-  </section>
-
   <!-- Buscador -->
   <div class="buscador-container">
     <img src="lupa.png" alt="Buscar" class="icono-lupa" />
     <input type="text" id="buscador" placeholder="Buscar productos..." />
   </div>
 
+  <!-- Catálogo -->
+  <section class="catalogo" id="catalogo">
+    <div class="producto" data-nombre="Samsung Galaxy A06">
+      <img src="samsung-galaxy-a06.png" alt="Samsung Galaxy A06" class="imagen-producto" draggable="false">
+      <h3>Samsung Galaxy A06</h3>
+      <p>$130</p>
+    </div>
+    <div class="producto" data-nombre="Samsung Galaxy A16">
+      <img src="samsung-galaxy-a16.png" alt="Samsung Galaxy A16" class="imagen-producto" draggable="false">
+      <h3>Samsung Galaxy A16</h3>
+      <p>$170</p>
+    </div>
+    <div class="producto" data-nombre="Samsung Galaxy A55 5G">
+      <img src="samsung-galaxy-a55-5g.png" alt="Samsung Galaxy A55 5G" class="imagen-producto" draggable="false">
+      <h3>Samsung Galaxy A55 5G</h3>
+      <p>$387</p>
+    </div>
+    <div class="producto" data-nombre="Infinix Smart 9 HD">
+      <img src="infinix-smart-9-hd.png" alt="Infinix Smart 9 HD" class="imagen-producto" draggable="false">
+      <h3>Infinix Smart 9 HD</h3>
+      <p>$387</p>
+    </div>
+    <div class="producto" data-nombre="Infinix Hot 50">
+      <img src="infinix-hot-50¡.png" alt="Infinix Hot 50" class="imagen-producto" draggable="false">
+      <h3>Infinix Hot 50</h3>
+      <p>$387</p>
+    </div>
+  </section>
+
   <!-- Scripts -->
+  <script src="script.js"></script>
   <script>
     document.querySelectorAll('img').forEach(img => {
       img.addEventListener('dragstart', e => e.preventDefault());
     });
     document.addEventListener('contextmenu', event => event.preventDefault());
   </script>
-</body>
-</html>
-
-  <!-- Bloquea clic derecho -->
-  <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
-  </script>
-</body>
-
-  <section class="catalogo">
-  <div class="producto">
-   <img src="samsung-galaxy-a06.png" alt="Samsung Galaxy A06" class="imagen-producto" draggable="false">
-    <h3>Samsung Galaxy A06</h3>
-    <p>$130</p>
-  </div>
-  <div class="producto">
-    <img src="samsung-galaxy-a16.png" alt="Samsung Galaxy A16" class="imagen-producto" draggable="false">
-    <h3>Samsung Galaxy A16</h3>
-    <p>$170</p>
-  </div>
-  <div class="producto">
-    <img src="samsung-galaxy-a16.png" alt="Samsung Galaxy A16" class="imagen-producto" draggable="false">
-    <h3>Samsung Galaxy A16</h3>
-    <p>$205</p>
-  </div>
-  <div class="producto">
-    <img src="samsung-galaxy-a55-5g.png" alt="Samsung Galaxy A55 5G" class="imagen-producto" draggable="false">
-    <h3>Samsung Galaxy A55 5G</h3>
-    <p>$387</p>
-  </div>
-    <div class="producto">
-    <img src="infinix-smart-9-hd.png" alt="Infinix Smart 9 HD" class="imagen-producto" draggable="false">
-    <h3>Infinix Smart 9 HD</h3>
-    <p>$387</p>
-      <div class="producto">
-    <img src="infinix-smart-9.png" alt="Infinix Smart 9" class="imagen-producto" draggable="false">
-    <h3>Infinix Smart 9</h3>
-    <p>$387</p>
-        <div class="producto">
-    <img src="infinix-hot-50¡.png" alt="Infinix Hot 50¡" class="imagen-producto" draggable="false">
-    <h3>Infinix Hot 50¡</h3>
-    <p>$387</p>
-</section>
-
-  <!-- Aquí puedes insertar el catálogo -->
-
-<div class="buscador-container">
-  <img src="lupa.png" alt="Buscar" class="icono-lupa" />
-  <input type="text" id="buscador" placeholder="Buscar productos..." />
-</div>
-
-  <section class="catalogo" id="catalogo">
-    <div class="producto" data-nombre="Redmi Note 12">Redmi Note 12</div>
-    <div class="producto" data-nombre="Samsung Galaxy A14">Samsung Galaxy A14</div>
-    <div class="producto" data-nombre="Infinix Hot 30">Infinix Hot 30</div>
-    <div class="producto" data-nombre="Tecno Spark 10">Tecno Spark 10</div>
-    <div class="producto" data-nombre="ZTE Blade V30">ZTE Blade V30</div>
-  </section>
-
-  <script src="script.js"></script>
-  <script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
 </body>
 </html>
