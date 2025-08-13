@@ -271,12 +271,13 @@ document.querySelector(".close").addEventListener("click", () => {
 });
 
 const searchInput = document.getElementById('searchInput');
-const productCards = document.querySelectorAll('.producto'); // Ajusta según tu clase
+const productCards = document.querySelectorAll('.producto');
 
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
   productCards.forEach(card => {
-    const name = card.textContent.toLowerCase();
+    const name = card.querySelector('h2').textContent.toLowerCase();
     card.style.display = name.includes(query) ? 'block' : 'none';
   });
 });
+
