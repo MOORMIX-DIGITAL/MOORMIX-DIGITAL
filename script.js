@@ -21,6 +21,22 @@ buscador.addEventListener("blur", () => {
   }
 });
 
+const mensajeNoEncontrado = document.getElementById("no-result");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  let hayCoincidencias = false;
+
+  productCards.forEach(card => {
+    const name = card.querySelector("h2").textContent.toLowerCase();
+    const coincide = name.includes(query);
+    card.style.display = coincide ? "block" : "none";
+    if (coincide) hayCoincidencias = true;
+  });
+
+  mensajeNoEncontrado.style.display = hayCoincidencias ? "none" : "block";
+});
+
 const lupa = document.querySelector(".icono-lupa");
 
 lupa.addEventListener("click", () => {
