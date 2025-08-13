@@ -21,6 +21,39 @@ buscador.addEventListener("blur", () => {
   }
 });
 
+const sugerencias = document.getElementById("sugerencias");
+
+searchInput.addEventListener("input", () => {
+  const query = searchInput.value.toLowerCase();
+  sugerencias.innerHTML = "";
+
+  let coincidencias = [];
+
+  productCards.forEach(card => {
+    const name = card.querySelector("h2").textContent;
+    if (name.toLowerCase().includes(query)) {
+      coincidencias.push(name);
+    }
+  });
+
+  if (query && coincidencias.length > 0) {
+    coincidencias.forEach(nombre => {
+      const item = document.createElement("li");
+      item.textContent = nombre;
+      item.style.cursor = "pointer";
+      item.style.padding = "5px";
+      item.style.background = "#f0f0f0";
+      item.style.marginBottom = "2px";
+      item.addEventListener("click", () => {
+        searchInput.value = nombre;
+        sugerencias.innerHTML = "";
+        searchInput.dispatchEvent(new Event("input"));
+      });
+      sugerencias.appendChild(item);
+    });
+  }
+});
+
 const mensajeNoEncontrado = document.getElementById("no-result");
 
 searchInput.addEventListener("input", () => {
