@@ -342,3 +342,16 @@ searchInput.addEventListener('input', () => {
     });
   });
 })();
+
+(function () {
+  const searchInput = document.getElementById('searchBar');
+  if (!searchInput) return;
+
+  searchInput.addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.product-card').forEach(card => {
+      const name = card.textContent.toLowerCase();
+      card.style.display = name.includes(query) ? 'block' : 'none';
+    });
+  });
+})();
