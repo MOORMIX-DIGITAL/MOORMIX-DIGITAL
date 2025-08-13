@@ -330,3 +330,15 @@ searchInput.addEventListener('input', () => {
   });
 });
 
+(function () {
+  const cart = [];
+
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+      const product = button.getAttribute('data-product');
+      cart.push(product);
+      alert(`${product} fue agregado al carrito.`);
+      console.log('Carrito actual:', cart);
+    });
+  });
+})();
