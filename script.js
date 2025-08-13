@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 },
 "galaxy-a55-5g": {
-  Nombre: "Samsung Galaxy A55 5G",
+  nombre: "Samsung Galaxy A55 5G",
   memoria: ["$150"],
   specs: [
   "Pantalla: Tipo: Super AMOLED", 
