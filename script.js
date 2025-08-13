@@ -235,3 +235,28 @@ document.querySelectorAll('.boton-precio').forEach(button => {
     mostrarFicha(modelo);
   });
 });
+document.querySelectorAll(".imagen-producto").forEach(img => {
+  img.addEventListener("click", () => {
+    const modelo = img.dataset.model;
+    const ficha = fichas[modelo];
+
+    if (!ficha) return;
+
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalImage = document.getElementById("modal-image");
+    const modalPrice = document.getElementById("modal-price");
+    const specsContainer = document.getElementById("modal-specs");
+
+    modalTitle.textContent = ficha.nombre;
+    modalImage.src = img.src;
+    modalPrice.textContent = ficha.memoria[0];
+    specsContainer.innerHTML = ficha.specs.map(item => `<p>${item}</p>`).join("");
+
+    modal.style.display = "block";
+  });
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+  document.getElementById("modal").style.display = "none";
+});
