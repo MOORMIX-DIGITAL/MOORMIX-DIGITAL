@@ -63,13 +63,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const fichas = {
     "galaxy-a06": {
       nombre: "Samsung Galaxy A06",
+      memoria: ["$150"],
       specs: [
-      "pantalla Tipo: PLS LCD",
+      "Pantalla Tipo: PLS LCD",
       "Tamaño: 6.5\"", 
       "Resolución: 720 x 1600",
-      "memoria Interna: 64 GB",
+      "Memoria Interna: 64 GB",
       "camara Frontal: 5 MP", 
-      "Trasera: 13 MP + 2 MP",
+      "Camara Trasera: 13 MP + 2 MP",
       "servicios: Reconocimiento facial",
       "adicionales: Envío gratis",
       "generales: Android 14", 
@@ -78,23 +79,25 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     "hot-50": {
       nombre: "Infinix Hot 50",
+      memoria: ["$150"],
       specs: [
-      "pantalla: Tipo: IPS LCD", 
+      "Pantalla Tipo: IPS LCD", 
       "Tamaño: 6.78\"", 
       "Resolución: 1080 x 2460",
-      "memoria: ["Interna: 128 GB",
-     "camara Frontal: 8 MP",
-     "Trasera: 50 MP + AI Lens",
-      "servicios: Huella digital lateral",
-      "adicionales: Envío gratis",
-      "generales: Android 13",
+      "Memoria: Interna: 128 GB",
+     "Camara Frontal: 8 MP",
+     "Camara Trasera: 50 MP + AI Lens",
+      "Servicios: Huella digital lateral",
+      "Adicionales: Envío gratis",
+      "Generales: Android 13",
       "Procesador Helio G88"
         ]
         },
     "galaxy-a16": {
-  "Nombre: Samsung Galaxy A16",
+  nombre: "Samsung Galaxy A16",
+      memoria: ["$150"],
       specs: [
-  "pantalla: Tipo: PLS LCD", 
+  "Pantalla Tipo: PLS LCD", 
   "Tamaño: 6.5\"", 
   "Resolución: 720 x 1600",
   "Memoria Interna: 128 GB",
@@ -107,7 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 },
 "galaxy-a55-5g": {
-  "Nombre: Samsung Galaxy A55 5G",
+  Nombre: "Samsung Galaxy A55 5G",
+  memoria: ["$150"],
   specs: [
   "Pantalla: Tipo: Super AMOLED", 
   "Tamaño: 6.6\"", 
@@ -122,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 },
 "infinix-smart-9": {
-  "Nombre: Infinix Smart 9",
+  nombre: "Infinix Smart 9",
+  memoria: ["$150"],
   specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.6\"", 
@@ -138,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-smart-9-hd": {
   nombre: "Infinix Smart 9 HD",
+  memoria: ["$150"],
   specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.6\"", 
@@ -153,6 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-hot-60-pro": {
   nombre: "Infinix Hot 60 Pro",
+  memoria: ["$150"],
   specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.78\"", 
@@ -168,6 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-hot-60-pro-plus": {
   nombre: "Infinix Hot 60 Pro+",
+  memoria: ["$150"],
   specs: [
   "Pantalla: Tipo: IPS LCD", 
   "Tamaño: 6.78\"", 
@@ -183,6 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-hot-60¡": {
   nombre: "Infinix Hot 60¡",
+  memoria: ["$150"],
   specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.78\"", 
