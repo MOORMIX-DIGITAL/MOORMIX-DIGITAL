@@ -41,17 +41,17 @@ searchInput.addEventListener("input", () => {
       const item = document.createElement("li");
       item.textContent = nombre;
       item.style.cursor = "pointer";
-      item.style.padding = "5px";
-      item.style.background = "#f0f0f0";
-      item.style.marginBottom = "2px";
-      item.addEventListener("click", () => {
-        searchInput.value = nombre;
-        sugerencias.innerHTML = "";
-        searchInput.dispatchEvent(new Event("input"));
-      });
-      sugerencias.appendChild(item);
-    });
-  }
+item.style.padding = "8px 12px";
+item.style.background = "#ffffff";
+item.style.border = "1px solid #ccc";
+item.style.borderRadius = "4px";
+item.style.marginBottom = "4px";
+item.style.transition = "background 0.3s";
+item.addEventListener("mouseover", () => {
+  item.style.background = "#e6f7ff";
+});
+item.addEventListener("mouseout", () => {
+  item.style.background = "#ffffff";
 });
 
 const mensajeNoEncontrado = document.getElementById("no-result");
