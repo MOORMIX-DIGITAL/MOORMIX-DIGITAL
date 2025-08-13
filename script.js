@@ -271,7 +271,7 @@ document.querySelector(".close").addEventListener("click", () => {
 });
 
 const searchInput = document.getElementById('searchInput');
-const productCards = document.querySelectorAll('.product-card'); // Ajusta según tu clase
+const productCards = document.querySelectorAll('.producto'); // Ajusta según tu clase
 
 searchInput.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
