@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     "galaxy-a16": {
   "Nombre: Samsung Galaxy A16",
-      speces: [
+      specs: [
   "pantalla: Tipo: PLS LCD", 
   "Tamaño: 6.5\"", 
   "Resolución: 720 x 1600",
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "galaxy-a55-5g": {
   "Nombre: Samsung Galaxy A55 5G",
-  speces: [
+  specs: [
   "Pantalla: Tipo: Super AMOLED", 
   "Tamaño: 6.6\"", 
   "Resolución: 1080 x 2340",
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-smart-9": {
   "Nombre: Infinix Smart 9",
-  speces: [
+  specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.6\"", 
   "Resolución: 720 x 1612",
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-smart-9-hd": {
   nombre: "Infinix Smart 9 HD",
-  speces: [
+  specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.6\"", 
   "Resolución: 720 x 1612",
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-hot-60-pro": {
   nombre: "Infinix Hot 60 Pro",
-  spece: [
+  specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.78\"", 
   "Resolución: 1080 x 2460",
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-hot-60-pro-plus": {
   nombre: "Infinix Hot 60 Pro+",
-  spece: [
+  specs: [
   "Pantalla: Tipo: IPS LCD", 
   "Tamaño: 6.78\"", 
   "Resolución: 1080 x 2460",
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
 },
 "infinix-hot-60¡": {
   nombre: "Infinix Hot 60¡",
-  spece: [
+  specs: [
   "Pantalla Tipo: IPS LCD", 
   "Tamaño: 6.78\"", 
   "Resolución: 1080 x 2460",
