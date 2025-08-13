@@ -269,3 +269,14 @@ document.querySelectorAll(".imagen-producto").forEach(img => {
 document.querySelector(".close").addEventListener("click", () => {
   document.getElementById("modal").style.display = "none";
 });
+
+const searchInput = document.getElementById('searchInput');
+const productCards = document.querySelectorAll('.product-card'); // Ajusta según tu clase
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+  productCards.forEach(card => {
+    const name = card.textContent.toLowerCase();
+    card.style.display = name.includes(query) ? 'block' : 'none';
+  });
+});
