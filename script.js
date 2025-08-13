@@ -209,6 +209,10 @@ card.addEventListener("click", () => {
     modalTitle.textContent = ficha.nombre;
     modalImage.src = img.src;
     modalPrice.textContent = ficha.memoria[0];
+    
+    const specsContainer = document.getElementById("modal-specs");
+specsContainer.innerHTML = ficha.specs.map(item => `<p>${item}</p>`).join("");
+    
     modal.style.display = "block";
   }
 });
